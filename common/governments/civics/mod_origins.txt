@@ -1,0 +1,110 @@
+origin_mechanists = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_mechanist
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_permanent_employment
+			}
+		}
+	}
+	modifier = {
+		planet_pop_assembly_mult = 0.2
+		ROBOT_species_trait_picks_add = 2
+		ROBOT_species_trait_points_add = 2
+	}
+	description = "origin_tooltip_mechanists_effects"
+	advanced_start = yes
+	random_weight = {
+		base = 10
+	}
+}
+
+origin_subterranean = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_subterranean.dds"
+	picture = GFX_origin_subterranean
+	flags = {
+		custom_start_screen
+	}
+	#set_city_graphical_culture = SUBTERRANEAN
+	playable = {
+		has_overlord_dlc = yes
+	}
+	possible = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+			}
+		}
+	}
+	description = "origin_tooltip_subterranean_effects"
+	advanced_start = yes
+	traits = {
+		trait = trait_cave_dweller
+	}
+	modifier = {
+		mining_district_housing_add = 3
+		mining_district_buildings_add = 0.5
+		planet_orbital_bombardment_damage = -0.5
+		planet_structures_cost_mult = 0.1
+		planet_structures_upkeep_mult = 0.1
+		planet_building_build_speed_mult = -0.1
+	}
+	random_weight = {
+		base = 5
+	}
+}
+
+origin_subterranean_machines = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_subterranean.dds"
+	picture = GFX_origin_subterranean
+	flags = { custom_start_screen }
+	playable = {
+		has_overlord_dlc = yes
+	}
+
+	description = "origin_tooltip_robot_subterranean_effects"
+
+	advanced_start = yes
+
+	potential = {
+		species_archetype = { value = MACHINE }
+	}
+
+	possible = {
+		species_archetype = { value = MACHINE }
+	}
+
+	traits = {
+		trait = trait_robot_cave_dweller
+	}
+
+	modifier = {
+		mining_district_housing_add = 3
+		mining_district_buildings_add = 0.5
+		planet_orbital_bombardment_damage = -0.5
+		planet_structures_cost_mult = 0.1
+		planet_structures_upkeep_mult = 0.1
+		planet_building_build_speed_mult = -0.1
+	}
+
+	random_weight = {
+		base = 5
+	}
+}
