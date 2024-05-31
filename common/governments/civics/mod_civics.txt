@@ -1,0 +1,33 @@
+civic_functional_architecture = {
+	#	description = "civic_tooltip_functional_architecture_effects"
+		potential = {
+			ethics = { NOT = { value = ethic_gestalt_consciousness } }
+			authority = { NOT = { value = auth_corporate } }
+		}
+		random_weight = { base = @civic_default_random_weight }
+		ai_weight = {
+			base = @ai_civic_default_base_weight
+			modifier = {
+				factor = @ai_civic_personality_match_factor
+				OR = {
+					has_ai_personality = erudite_explorers
+					has_ai_personality = ruthless_capitalists
+					has_ai_personality = hegemonic_imperialists
+					has_ai_personality = harmonious_hierarchy
+				}
+			}
+			modifier = {
+				factor = @ai_civic_personality_mismatch_factor
+				OR = {
+					has_ai_personality = spiritual_seekers
+					has_ai_personality = decadent_hierarchy
+					has_ai_personality = peaceful_traders
+				}
+			}
+		}
+		modifier = {
+			empire_size_districts_mult = -0.2
+			planet_max_buildings_add = 2
+		}
+	}
+	
