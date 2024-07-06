@@ -13,3 +13,17 @@ councilor_functional_architecture = {
 		inline_script = councilor_leader_weights
 	}
 }
+
+councilor_technocracy = {
+	leader_class = { scientist }
+	is_leader_possible = {
+		leader_class = scientist
+	}
+	civic = civic_technocracy
+	modifier = {
+		planet_researchers_produces_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}

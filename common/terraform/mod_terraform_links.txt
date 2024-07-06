@@ -297,3 +297,123 @@ terraform_link = {
 		weight = 0
 	}
 }
+
+terraform_link = {
+	from = "pc_ringworld_habitable_damaged"
+	to = "pc_ringworld_habitable"
+
+	resources = {
+		category = megastructures
+		cost = {
+			influence = 100
+			energy = 1000
+			alloys = 10000
+		}
+	}
+
+	duration = 4200
+
+	condition = {
+		has_technology = "tech_ring_world"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_ringworld_tech"
+	to = "pc_ringworld_habitable"
+
+	resources = {
+		category = megastructures
+		cost = {
+			influence = 100
+			energy = 1000
+			alloys = 10000
+		}
+	}
+
+	duration = 4200
+
+	condition = {
+		has_technology = "tech_ring_world"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_ringworld_tech_damaged"
+	to = "pc_ringworld_habitable"
+
+	resources = {
+		category = megastructures
+		cost = {
+			influence = 100
+			energy = 1000
+			alloys = 10000
+		}
+	}
+
+	duration = 4200
+
+	condition = {
+		has_technology = "tech_ring_world"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_ringworld_seam"
+	to = "pc_ringworld_habitable"
+
+	resources = {
+		category = megastructures
+		cost = {
+			influence = 100
+			energy = 1000
+			alloys = 10000
+		}
+	}
+
+	duration = 4200
+
+	condition = {
+		has_technology = "tech_ring_world"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_ringworld_seam_damaged"
+	to = "pc_ringworld_habitable"
+
+	resources = {
+		category = megastructures
+		cost = {
+			influence = 100
+			energy = 1000
+			alloys = 10000
+		}
+	}
+
+	duration = 4200
+
+	condition = {
+		has_technology = "tech_ring_world"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

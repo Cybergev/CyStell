@@ -1,0 +1,45 @@
+tr_modularity_adopt = {
+	possible = {
+		custom_tooltip = {
+			fail_text = REQUIRES_FINISHED_TRANSFORMATION
+			OR = {
+				has_country_flag = modularity_traditions_unlocked
+				has_country_flag = synth_physical
+			}
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_gestalt = yes
+				}
+				every_owned_leader = {
+					limit = {
+						is_councilor = yes
+						is_ruler = no
+					}
+					set_gestalt_node_portrait_effect = yes
+				}
+			}
+		}
+	}
+	triggered_modifier = {
+		potential = {
+			has_country_flag = synthetic_empire
+		}
+		MACHINE_species_trait_points_add = 1
+		mult = modifier:ROBOT_species_trait_points_add
+	}
+	triggered_modifier = {
+		potential = {
+			has_country_flag = synthetic_empire
+		}
+		MACHINE_species_trait_picks_add = 1
+		mult = modifier:ROBOT_species_trait_picks_add
+	}
+	modifier = {
+		planet_metallurgists_sr_living_metal_produces_add = 0.2
+	}
+	unlocks_agenda = agenda_modularity_reshape_form
+}

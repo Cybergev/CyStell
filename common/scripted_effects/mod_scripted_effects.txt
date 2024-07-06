@@ -1,0 +1,232 @@
+add_leader_traits_after_modification = {
+	if = {
+		limit = {
+			species = {
+				has_trait = trait_erudite
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_trait = leader_trait_erudite
+					has_leader_flag = renowned_leader
+					has_leader_flag = legendary_leader
+				}
+			}
+			add_trait_no_notify = leader_trait_erudite
+		}
+	}
+	if = {
+		limit = {
+			species = {
+				has_trait = trait_psionic
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_trait = leader_trait_psionic
+				}
+			}
+			add_trait_no_notify = leader_trait_psionic
+		}
+	}
+}
+
+remove_leader_traits_after_modification = {
+	if = {
+		limit = {
+			species = {
+				NOT = {
+					has_trait = trait_erudite
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_erudite
+			}
+			remove_trait = leader_trait_erudite
+		}
+	}
+	if = {
+		limit = {
+			species = {
+				NOT = {
+					has_trait = trait_psionic
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = leader_trait_psionic
+			}
+			remove_trait = leader_trait_psionic
+		}
+	}
+}
+
+create_cybernetic_species_mod = {
+	species = {
+		modify_species = {
+			effect = {
+				create_species = {
+					is_mod = yes
+					name = this
+					plural = this
+					class = this
+					portrait = this
+					traits = this
+					can_be_modified = this
+					homeworld = this
+					namelist = this
+					gender = this
+					traits = {
+						ideal_planet_class = this
+						trait = trait_cybernetic
+					}
+				}
+			}
+		}
+		save_event_target_as = changing_species
+	}
+	owner = {
+		every_owned_pop = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_pool_leader = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_envoy = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+	}
+}
+
+create_cyber_species_effect = {
+	species = {
+		modify_species = {
+			effect = {
+				create_species = {
+					is_mod = yes
+					name = this
+					plural = this
+					class = this
+					portrait = this
+					traits = this
+					can_be_modified = this
+					homeworld = this
+					namelist = this
+					gender = this
+					traits = {
+						ideal_planet_class = this
+						trait = trait_cybernetic
+					}
+				}
+				last_created_species = {
+					save_global_event_target_as = cyberspecies@prev
+				}
+			}
+		}
+	}
+}
+
+upgrade_mechanical_to_machine = {
+	species = {
+		modify_species = {
+			remove_trait = trait_mechanical
+			add_trait = trait_machine_unit
+			effect = {
+				create_species = {
+					name = this
+					portrait = this
+					plural = this
+					homeworld = this
+					class = MACHINE
+					traits = this
+					is_mod = yes
+					can_be_modified = this
+					gender = this
+					namelist = this
+					effect = {
+						save_event_target_as = last_created_species
+					}
+				}
+			}
+		}
+		save_event_target_as = changing_species
+	}
+	change_dominant_species = {
+		species = event_target:last_created_species
+		change_all = yes
+	}
+	owner = {
+		every_owned_pop = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_pool_leader = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_envoy = {
+			limit = {
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_exact_same_species = event_target:changing_species
+			}
+			change_species = last_created_species
+		}
+	}
+}

@@ -1,0 +1,108 @@
+
+star_eater = {
+	is_space_object = yes
+	max_speed = @speed_default
+	acceleration = 0.2
+	rotation_speed = 0.15
+	collision_radius = 16
+	modifier = {
+		ship_evasion_add = 5
+		ship_armor_add = 100000
+		ships_upkeep_mult = -1
+	}
+	max_hitpoints = 100000
+	size_multiplier = 8
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "main_body" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 7
+	icon = ship_size_military_32
+	construction_type = starbase_shipyard
+	base_buildtime = 6000
+	can_have_federation_design = no
+	components_add_to_cost = no
+
+	class = shipclass_military_special
+	enable_default_design = yes
+	use_shipnames_from = colossus
+
+	ship_roles = { artillery gunship }
+
+	potential_country = {
+		exists = owner
+		owner = {
+			OR = {
+				has_crisis_level = crisis_level_5
+				has_technology = tech_colossus
+			}	
+		}	
+	}
+
+	potential_construction = {
+		OR = {
+			is_scope_type = starbase
+			AND = {
+				is_scope_type = megastructure
+				OR = {
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_restored
+				}
+			}
+		}
+	}
+
+	possible_construction = {
+		custom_tooltip = {
+			fail_text = starbase_citadel_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_size >= starbase_citadel
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = starbase_colossal_yards_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_building = colossus_yards
+				}
+			}
+		}
+	}
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
+
+	resources = {
+		category = ships
+		cost = {
+			sr_dark_matter = 10000
+		}
+	}
+
+	ai_ship_data = {
+		min = 1
+		max = 1
+	}
+}

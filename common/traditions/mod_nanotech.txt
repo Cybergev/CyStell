@@ -1,0 +1,14 @@
+tr_nanotech_adopt = {
+	possible = {
+		custom_tooltip = {
+			fail_text = REQUIRES_FINISHED_TRANSFORMATION
+			OR = {
+				has_country_flag = nanotech_traditions_unlocked
+				has_country_flag = synthetic_empire
+			}
+		}
+	}
+	custom_tooltip = tr_nanotech_adopt_modifier_desc
+	unlocks_agenda = agenda_nanotech_unstoppable_swarm
+	#Unlocks nanolab 1 and Starbase building
+}

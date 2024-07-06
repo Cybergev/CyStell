@@ -1,0 +1,20 @@
+destroy_habitat_dec = {
+	icon = decision_tidal_lock_planet
+	sound = event_structural_collapse
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	potential = {
+		is_planet_class = "pc_habitat"
+		is_inside_border = from
+	}
+	effect = {
+		spawn_habitat_cracker_effect = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
