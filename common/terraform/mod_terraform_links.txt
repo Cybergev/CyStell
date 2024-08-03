@@ -1,22 +1,16 @@
-
 terraform_link = {
 	from = "pc_arctic"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -25,21 +19,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_alpine"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -48,21 +37,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_tundra"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -71,21 +55,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_continental"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -94,21 +73,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_ocean"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -117,21 +91,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_tropical"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -140,21 +109,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_savannah"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -163,21 +127,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_arid"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -186,21 +145,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_desert"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -209,21 +163,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_nuked"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -232,21 +181,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_barren"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -255,21 +199,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_broken"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -278,21 +217,16 @@ terraform_link = {
 terraform_link = {
 	from = "pc_toxic"
 	to = "pc_molten"
-
 	resources = {
 		category = terraforming
-
 		cost = {
 			energy = 1000
 		}
 	}
-
 	duration = 360
-
 	condition = {
 		has_technology = "tech_terrestrial_sculpting"
 	}
-
 	ai_weight = {
 		weight = 0
 	}
@@ -301,119 +235,99 @@ terraform_link = {
 terraform_link = {
 	from = "pc_ringworld_habitable_damaged"
 	to = "pc_ringworld_habitable"
-
 	resources = {
 		category = megastructures
 		cost = {
-			influence = 100
-			energy = 1000
+			influence = 300
+			energy = 5000
 			alloys = 10000
 		}
 	}
-
-	duration = 4200
-
+	duration = 5500
 	condition = {
 		has_technology = "tech_ring_world"
 	}
-
 	ai_weight = {
-		weight = 0
+		weight = 10
 	}
 }
 
 terraform_link = {
 	from = "pc_ringworld_tech"
 	to = "pc_ringworld_habitable"
-
 	resources = {
 		category = megastructures
 		cost = {
-			influence = 100
-			energy = 1000
+			influence = 300
+			energy = 5000
 			alloys = 10000
 		}
 	}
-
-	duration = 4200
-
+	duration = 5500
 	condition = {
 		has_technology = "tech_ring_world"
 	}
-
 	ai_weight = {
-		weight = 0
+		weight = 10
 	}
 }
 
 terraform_link = {
 	from = "pc_ringworld_tech_damaged"
 	to = "pc_ringworld_habitable"
-
 	resources = {
 		category = megastructures
 		cost = {
-			influence = 100
-			energy = 1000
+			influence = 300
+			energy = 5000
 			alloys = 10000
 		}
 	}
-
-	duration = 4200
-
+	duration = 5500
 	condition = {
 		has_technology = "tech_ring_world"
 	}
-
 	ai_weight = {
-		weight = 0
+		weight = 10
 	}
 }
 
 terraform_link = {
 	from = "pc_ringworld_seam"
 	to = "pc_ringworld_habitable"
-
 	resources = {
 		category = megastructures
 		cost = {
-			influence = 100
-			energy = 1000
+			influence = 300
+			energy = 5000
 			alloys = 10000
 		}
 	}
-
-	duration = 4200
-
+	duration = 5500
 	condition = {
 		has_technology = "tech_ring_world"
 	}
-
 	ai_weight = {
-		weight = 0
+		weight = 10
 	}
 }
 
 terraform_link = {
 	from = "pc_ringworld_seam_damaged"
 	to = "pc_ringworld_habitable"
-
 	resources = {
 		category = megastructures
 		cost = {
-			influence = 100
-			energy = 1000
+			influence = 300
+			energy = 5000
 			alloys = 10000
 		}
 	}
-
-	duration = 4200
-
+	duration = 5500
 	condition = {
 		has_technology = "tech_ring_world"
 	}
-
 	ai_weight = {
-		weight = 0
+		weight = 10
 	}
 }

@@ -1,4 +1,42 @@
-destroy_habitat_dec = {
+destroy_habitatable_dec = {
+	icon = decision_tidal_lock_planet
+	sound = event_structural_collapse
+	resources = {
+		category = decisions
+		cost = {
+			energy = 10000
+		}
+	}
+	potential = {
+		OR = {
+			is_planet_class = "pc_habitat"
+			is_ringworld = yes
+		}
+		is_inside_border = from
+	}
+	effect = {
+		remove_all_buildings = yes
+		destroy_colony = yes
+		if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			spawn_habitat_cracker_effect = yes
+		}
+		else_if = {
+			limit = {
+				is_ringworld = yes
+			}
+			spawn_ringworld_cracker_effect = yes
+			change_pc = pc_ringworld_habitable_damaged
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+dispose_remains_planet_dec = {
 	icon = decision_tidal_lock_planet
 	sound = event_structural_collapse
 	resources = {
@@ -8,11 +46,19 @@ destroy_habitat_dec = {
 		}
 	}
 	potential = {
-		is_planet_class = "pc_habitat"
+		OR = {
+			is_planet_class = "pc_shattered"
+			is_planet_class = "pc_shattered_2"
+		}
 		is_inside_border = from
 	}
 	effect = {
-		spawn_habitat_cracker_effect = yes
+		remove_planet = yes
+		owner = {
+			add_resource = {
+				minerals = 3000
+			}
+		}
 	}
 	ai_weight = {
 		weight = 0

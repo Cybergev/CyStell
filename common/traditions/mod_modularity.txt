@@ -1,10 +1,17 @@
 tr_modularity_adopt = {
 	possible = {
-		custom_tooltip = {
-			fail_text = REQUIRES_FINISHED_TRANSFORMATION
-			OR = {
+		if = {
+			limit = {
+				has_country_flag = synthetic_empire
+			}
+			NOT = {
+				has_country_flag = synth_virtual
+			}
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = REQUIRES_FINISHED_TRANSFORMATION
 				has_country_flag = modularity_traditions_unlocked
-				has_country_flag = synth_physical
 			}
 		}
 	}
@@ -42,4 +49,27 @@ tr_modularity_adopt = {
 		planet_metallurgists_sr_living_metal_produces_add = 0.2
 	}
 	unlocks_agenda = agenda_modularity_reshape_form
+}
+
+tr_modularity_finish = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = cybernetics.5080
+			}
+			if = {
+				limit = {
+					has_country_flag = synthetic_empire
+				}
+				upgrade_mechanical_to_machine = yes
+			}
+			else = {
+				custom_tooltip = tr_modularity_finish_modifier_desc
+			}
+		}
+	}
+	modifier = {
+		planet_jobs_upkeep_mult = -0.15
+		ascension_perks_add = 1
+	}
 }

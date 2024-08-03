@@ -1,10 +1,17 @@
 tr_nanotech_adopt = {
 	possible = {
-		custom_tooltip = {
-			fail_text = REQUIRES_FINISHED_TRANSFORMATION
-			OR = {
-				has_country_flag = nanotech_traditions_unlocked
+		if = {
+			limit = {
 				has_country_flag = synthetic_empire
+			}
+			NOT = {
+				has_country_flag = synth_virtual
+			}
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = REQUIRES_FINISHED_TRANSFORMATION
+				has_country_flag = nanotech_traditions_unlocked
 			}
 		}
 	}

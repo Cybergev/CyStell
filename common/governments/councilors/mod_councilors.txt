@@ -1,3 +1,51 @@
+councilor_technocracy = {
+	leader_class = { scientist }
+	is_leader_possible = {
+		leader_class = scientist
+	}
+	civic = civic_technocracy
+	modifier = {
+		planet_researchers_produces_mult = 0.02
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_dark_consortium = {
+	leader_class = { official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_dark_consortium
+	modifier = {
+		planet_jobs_sr_dark_matter_produces_mult = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_dark_consortium_corporate = {
+	leader_class = { official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_corporate_dark_consortium
+	modifier = {
+		planet_jobs_sr_dark_matter_produces_mult = 0.01
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
 councilor_functional_architecture = {
 	leader_class = { official }
 	is_leader_possible = {
@@ -8,20 +56,6 @@ councilor_functional_architecture = {
 		planet_structures_cost_mult = -0.02
 		planet_structures_upkeep_mult = -0.02
 		planet_building_build_speed_mult = 0.02
-	}
-	ai_hiring_weight = {
-		inline_script = councilor_leader_weights
-	}
-}
-
-councilor_technocracy = {
-	leader_class = { scientist }
-	is_leader_possible = {
-		leader_class = scientist
-	}
-	civic = civic_technocracy
-	modifier = {
-		planet_researchers_produces_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

@@ -2,16 +2,15 @@ tradition_modularity = {
 	tree_template = "tree_12_11_11"
 	adoption_bonus = "tr_modularity_adopt"
 	finish_bonus = "tr_modularity_finish"
-
 	potential = {
 		has_machine_age_dlc = yes
 		is_robot_empire = yes
 		NOR = {
 			has_country_flag = synth_virtual
+			has_country_flag = virtuality_traditions_unlocked
 			has_ascension_perk = ap_organo_machine_interfacing_assimilator
 		}
 	}
-
 	traditions = {
 		"tr_modularity_1"
 		"tr_modularity_2"
@@ -19,7 +18,6 @@ tradition_modularity = {
 		"tr_modularity_4"
 		"tr_modularity_5"
 	}
-
 	ai_weight = {
 		factor = 1000
 	}

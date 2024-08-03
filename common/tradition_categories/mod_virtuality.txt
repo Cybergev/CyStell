@@ -2,16 +2,16 @@ tradition_virtuality = {
 	tree_template = "tree_21_12"
 	adoption_bonus = "tr_virtuality_adopt"
 	finish_bonus = "tr_virtuality_finish"
-
 	potential = {
 		has_machine_age_dlc = yes
 		is_robot_empire = yes
 		NOR = {
 			has_country_flag = synth_physical
+			has_country_flag = nanotech_traditions_unlocked
+			has_country_flag = modularity_traditions_unlocked
 			has_ascension_perk = ap_organo_machine_interfacing_assimilator
 		}
 	}
-
 	traditions = {
 		"tr_virtuality_1"
 		"tr_virtuality_2"
@@ -19,7 +19,6 @@ tradition_virtuality = {
 		"tr_virtuality_4"
 		"tr_virtuality_5"
 	}
-
 	ai_weight = {
 		factor = 1000
 	}

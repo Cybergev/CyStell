@@ -56,6 +56,88 @@ civic_technocracy = {
 	}
 }
 
+civic_dark_consortium = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_dark_consortium_effects"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = { value = auth_corporate }
+		}
+		civics = {
+			NOT = { value = civic_corporate_dark_consortium }
+		}
+	}
+	modifier = {
+		planet_researchers_sr_dark_matter_produces_add = 1
+	}
+	modification = {
+		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
+		add = {
+			has_technology = tech_mine_dark_matter
+		}
+		remove = {
+			custom_tooltip = {
+				fail_text = CIVIC_LOCKED
+				NOT = { has_country_flag = civic_dark_consortium_locked }
+			}
+		}
+	}
+	alternate_civic_version = civic_corporate_dark_consortium
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
+
+civic_corporate_dark_consortium = {
+	playable = { has_astral_planes_dlc = yes }
+	ai_playable = { has_astral_planes_dlc = yes }
+	description = "civic_corporate_dark_consortium_effects"
+	potential = {
+		OR = {
+			authority = {
+				value = auth_corporate
+			}
+			civics = {
+				value = civic_galactic_sovereign_megacorp
+			}
+		}
+		civics = {
+			NOT = { value = civic_dark_consortium }
+		}
+	}
+	modifier = {
+		planet_researchers_sr_dark_matter_produces_add = 1
+	}
+	modification = {
+		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
+		add = {
+			has_technology = tech_mine_dark_matter
+		}
+		remove = {
+			fail_text = CIVIC_LOCKED
+			NOT = { has_country_flag = civic_dark_consortium_locked }
+		}
+	}
+	alternate_civic_version = civic_dark_consortium
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+}
+
 civic_functional_architecture = {
 	#	description = "civic_tooltip_functional_architecture_effects"
 	potential = {

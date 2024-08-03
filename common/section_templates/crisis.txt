@@ -181,17 +181,17 @@ ship_section_template = {
 		locatorname = "core"
 	}
 	component_slot = {
-		name = "TITANIC_02"
-		template = "invisible_titanic_fixed"
-		locatorname = "core"
-	}
-	component_slot = {
 		name = "EXTRA_LARGE_GUN_01"
 		template = "invisible_extra_large_fixed"
 		locatorname = "core"
 	}
 	component_slot = {
 		name = "EXTRA_LARGE_GUN_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "core"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_03"
 		template = "invisible_extra_large_fixed"
 		locatorname = "core"
 	}
@@ -245,7 +245,30 @@ ship_section_template = {
 		template = "large_strike_craft"
 		locatorname = "root"
 	}
-
-	large_utility_slots = 20
-	aux_utility_slots = 5
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_07"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_08"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_09"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_10"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	aux_utility_slots = 10
 }
