@@ -2,16 +2,13 @@
 # show the trait to add to species when genemodding or randomizing traits.
 # Scopes are this = species, from = country performing the modification.
 # default = always=yes
-
 # species_possible_remove = {}
 # allow to remove the trait when genemodding.
 # Scopes are this = species, from = country performing the modification.
 # default = always=yes
-
 trait_hive_mind = {
 	cost = 0
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -23,17 +20,17 @@ trait_hive_mind = {
 	species_possible_merge_add = {
 		always = no
 	}
-
-	modifier = {}
-
+	modifier = {
+	}
 	leader_age_min = 10
 	leader_age_max = 20
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ruler_hive_mind.dds"
 }
 
@@ -51,21 +48,19 @@ trait_machine_unit = {
 	species_possible_merge_add = {
 		always = no
 	}
-
 	icon = "gfx/interface/icons/traits/trait_machine_unit.dds"
-	allowed_archetypes = { MACHINE ROBOT }
-
+	allowed_archetypes = {
+		MACHINE
+		ROBOT
+	}
 	immortal_leaders = no
-
 	leader_age_min = 5
 	leader_age_max = 10
-
 	modifier = {
 		pc_machine_habitability = 1
 		leader_lifespan_add = 20
 		habitability_floor_add = 0.5
 	}
-
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
 			exists = owner
@@ -75,7 +70,6 @@ trait_machine_unit = {
 		}
 		pc_nanotech_habitability = 1
 	}
-
 	custom_tooltip_with_modifiers = TRAIT_MACHINE_UNIT_EFFECT
 }
 
@@ -93,19 +87,17 @@ trait_mechanical = {
 	species_possible_merge_add = {
 		always = no
 	}
-
-	allowed_archetypes = { ROBOT MACHINE }
-
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	immortal_leaders = no
-
 	leader_age_min = 1
 	leader_age_max = 10
-
 	modifier = {
 		pc_machine_habitability = 1
 		habitability_floor_add = 0.5
 	}
-
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
 			exists = owner
@@ -115,14 +107,20 @@ trait_mechanical = {
 		}
 		pc_nanotech_habitability = 1
 	}
-
 	custom_tooltip_with_modifiers = TRAIT_MECHANICAL_UNIT_EFFECT
 }
 
 trait_syncretic_proles = {
 	cost = 1
 	potential_crossbreeding_chance = 0.33
-	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_machine_unit" }
+	opposites = {
+		"trait_intelligent"
+		"trait_erudite"
+		"trait_natural_engineers"
+		"trait_natural_physicists"
+		"trait_natural_sociologists"
+		"trait_machine_unit"
+	}
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -138,13 +136,14 @@ trait_syncretic_proles = {
 		always = no
 	}
 	icon = "gfx/interface/icons/traits/trait_primitive.dds"
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	custom_tooltip = TRAIT_SYNCRETIC_PROLES_EFFECT
 	modifier = {
-		pop_happiness = 0.10
-		planet_jobs_produces_mult = 0.10
+		pop_happiness = 0.1
+		planet_jobs_produces_mult = 0.1
 	}
 	slave_cost = {
 		energy = 500
@@ -154,9 +153,7 @@ trait_syncretic_proles = {
 trait_lithoid = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-
 	sorting_priority = 20
-
 	initial = yes
 	randomized = no
 	species_potential_add = {
@@ -169,21 +166,18 @@ trait_lithoid = {
 		always = no
 	}
 	immortal_leaders = no
-
-	leader_age_min = 27
-	leader_age_max = 38
-
-	allowed_archetypes = { LITHOID }
+	leader_age_min = 20
+	leader_age_max = 30
+	allowed_archetypes = {
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/trait_lithoid.dds"
-
 	custom_tooltip = TRAIT_LITHOID_EFFECT
 	modifier = {
-		pop_growth_speed = -0.25
-		planet_pop_assembly_organic_mult = -0.25
+		founder_species_growth_mult = -0.25
 		pop_environment_tolerance = 0.5
 		army_health = 0.5
 		leader_lifespan_add = 50
@@ -205,9 +199,7 @@ trait_lithoid = {
 trait_aquatic = {
 	cost = 2
 	host_has_dlc = "Aquatics Species Pack"
-
 	sorting_priority = 20
-
 	random_weight = {
 		AQUATIC = 100
 		MOL = 10
@@ -215,21 +207,27 @@ trait_aquatic = {
 		MAM = 2
 		LITHOID = 0.5
 	}
-
 	allowed_planet_classes = {
 		pc_ocean
 	}
-
 	species_possible_remove = {
 		if = {
 			limit = {
 				exists = from
 			}
 			if = {
-				limit = { NOT = { from = { has_ascension_perk = ap_hydrocentric } } }
+				limit = {
+					NOT = {
+						from = {
+							has_ascension_perk = ap_hydrocentric
+						}
+					}
+				}
 				custom_tooltip = {
 					fail_text = trait_aquatic_remove_evolutionary_mastery
-					from = { has_tradition = tr_genetics_resequencing }
+					from = {
+						has_tradition = tr_genetics_resequencing
+					}
 				}
 			}
 			else = {
@@ -247,17 +245,19 @@ trait_aquatic = {
 		}
 	}
 	initial = yes
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 1
 		modifier = {
 			factor = 0
-			NOT = { has_trait = trait_pc_ocean_preference }
+			NOT = {
+				has_trait = trait_pc_ocean_preference
+			}
 		}
 	}
-
 	custom_tooltip_with_modifiers = trait_aquatic_tooltip
 	triggered_pop_modifier = {
 		potential = {
@@ -283,7 +283,9 @@ trait_aquatic = {
 					has_modifier = flooded_habitat
 				}
 				exists = owner
-				owner = { has_ascension_perk = ap_hydrocentric }
+				owner = {
+					has_ascension_perk = ap_hydrocentric
+				}
 			}
 		}
 		pop_housing_usage_mult = -0.05
@@ -309,7 +311,9 @@ trait_aquatic = {
 			exists = planet
 			planet = {
 				exists = owner
-				owner = { has_ascension_perk = ap_hydrocentric }
+				owner = {
+					has_ascension_perk = ap_hydrocentric
+				}
 				is_ideal = no
 				NOR = {
 					has_climate = wet
@@ -338,7 +342,9 @@ trait_aquatic = {
 			}
 			is_ideal = no
 			exists = owner
-			owner = { has_ascension_perk = ap_hydrocentric }
+			owner = {
+				has_ascension_perk = ap_hydrocentric
+			}
 		}
 		pop_environment_tolerance = -0.1
 	}
@@ -351,9 +357,7 @@ trait_aquatic = {
 	modifier = {
 		pc_ocean_habitability = 0.2
 	}
-
 	icon = "gfx/interface/icons/traits/trait_aquatic.dds"
-
 	assembly_score = {
 		modifier = {
 			add = 1
@@ -364,7 +368,6 @@ trait_aquatic = {
 				}
 			}
 		}
-
 		modifier = {
 			subtract = 1
 			from = {
@@ -381,22 +384,26 @@ trait_aquatic = {
 trait_robot_aquatic = {
 	cost = 2
 	host_has_dlc = "Aquatics Species Pack"
-
 	sorting_priority = 20
-
-	opposites = { "trait_robot_cave_dweller" }
-
+	opposites = {
+		"trait_robot_cave_dweller"
+	}
 	allowed_planet_classes = {
 		pc_ocean
 	}
-
 	species_possible_remove = {
 		if = {
 			limit = {
 				exists = from
 			}
 			if = {
-				limit = { NOT = { from = { has_ascension_perk = ap_hydrocentric } } }
+				limit = {
+					NOT = {
+						from = {
+							has_ascension_perk = ap_hydrocentric
+						}
+					}
+				}
 				always = yes
 			}
 			else = {
@@ -411,17 +418,19 @@ trait_robot_aquatic = {
 		always = yes
 	}
 	initial = yes
-
-	allowed_archetypes = { MACHINE ROBOT }
-
+	allowed_archetypes = {
+		MACHINE
+		ROBOT
+	}
 	ai_weight = {
 		weight = 1
 		modifier = {
 			factor = 0
-			NOT = { has_trait = trait_pc_ocean_preference }
+			NOT = {
+				has_trait = trait_pc_ocean_preference
+			}
 		}
 	}
-
 	custom_tooltip_with_modifiers = trait_robot_aquatic_tooltip
 	triggered_pop_modifier = {
 		potential = {
@@ -447,7 +456,9 @@ trait_robot_aquatic = {
 					has_modifier = flooded_habitat
 				}
 				exists = owner
-				owner = { has_ascension_perk = ap_hydrocentric }
+				owner = {
+					has_ascension_perk = ap_hydrocentric
+				}
 			}
 		}
 		pop_housing_usage_mult = -0.05
@@ -473,7 +484,9 @@ trait_robot_aquatic = {
 			exists = planet
 			planet = {
 				exists = owner
-				owner = { has_ascension_perk = ap_hydrocentric }
+				owner = {
+					has_ascension_perk = ap_hydrocentric
+				}
 				is_ideal = no
 				NOR = {
 					has_climate = wet
@@ -502,7 +515,9 @@ trait_robot_aquatic = {
 			}
 			is_ideal = no
 			exists = owner
-			owner = { has_ascension_perk = ap_hydrocentric }
+			owner = {
+				has_ascension_perk = ap_hydrocentric
+			}
 		}
 		pop_environment_tolerance = -0.1
 	}
@@ -515,9 +530,7 @@ trait_robot_aquatic = {
 	modifier = {
 		pc_ocean_habitability = 0.2
 	}
-
 	icon = "gfx/interface/icons/traits/trait_robot_aquatic.dds"
-
 	assembly_score = {
 		modifier = {
 			add = 1
@@ -528,7 +541,6 @@ trait_robot_aquatic = {
 				}
 			}
 		}
-
 		modifier = {
 			subtract = 1
 			from = {
@@ -545,9 +557,13 @@ trait_robot_aquatic = {
 trait_necrophage = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_tiyanki" }
+	opposites = {
+		"trait_plantoid_budding"
+		"trait_lithoid_budding"
+		"trait_advanced_budding"
+		"trait_tiyanki"
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -560,14 +576,14 @@ trait_necrophage = {
 		always = no
 	}
 	immortal_leaders = no
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/trait_necrophage.dds"
-
 	modifier = {
 		leader_lifespan_add = 80
 		pop_growth_speed = -0.75
@@ -579,16 +595,24 @@ trait_necrophage = {
 		planet_jobs_specialist_only_produces_mult = 0.05
 		planet_jobs_worker_only_produces_mult = -0.1
 	}
-
 	custom_tooltip_with_modifiers = trait_necrophage_gestalt_tooltip
 }
 
 trait_clone_soldier_infertile = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	opposites = {
+		"trait_slow_breeders"
+		"trait_rapid_breeders"
+		"trait_plantoid_budding"
+		"trait_lithoid_budding"
+		"trait_advanced_budding"
+		"trait_vat_grown"
+		"trait_tiyanki"
+		"trait_humanoid_psychological_infertility"
+		"trait_humanoid_existential_iteroparity"
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	improves_leaders = yes
@@ -603,22 +627,20 @@ trait_clone_soldier_infertile = {
 	}
 	immortal_leaders = no
 	infertile = yes
-
 	leader_age_min = 5
 	leader_age_max = 20
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_clone_soldier.dds"
-
 	custom_tooltip_with_modifiers = genelock_trait_tooltip
 	modifier = {
 		# Pop modifiers
-		pop_government_ethic_attraction = 0.50
-
+		pop_government_ethic_attraction = 0.5
 		# Leader modifiers
 		leader_lifespan_add = -40
 		army_damage_mult = 0.5
@@ -628,9 +650,18 @@ trait_clone_soldier_infertile = {
 trait_clone_soldier_infertile_full_potential = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
+	opposites = {
+		"trait_slow_breeders"
+		"trait_rapid_breeders"
+		"trait_plantoid_budding"
+		"trait_lithoid_budding"
+		"trait_advanced_budding"
+		"trait_vat_grown"
+		"trait_tiyanki"
+		"trait_humanoid_psychological_infertility"
+		"trait_humanoid_existential_iteroparity"
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	improves_leaders = yes
@@ -645,25 +676,23 @@ trait_clone_soldier_infertile_full_potential = {
 	}
 	immortal_leaders = no
 	infertile = yes
-
 	leader_age_min = 5
 	leader_age_max = 20
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_clone_soldier_ascendant.dds"
-
 	custom_tooltip_with_modifiers = genelock_trait_tooltip
 	modifier = {
 		# Pop modifiers
-		pop_government_ethic_attraction = 0.50
-		pop_environment_tolerance = 0.20
+		pop_government_ethic_attraction = 0.5
+		pop_environment_tolerance = 0.2
 		planet_jobs_ruler_produces_mult = 0.4
 		planet_jobs_specialist_produces_mult = 0.25
-
 		# Leader modifiers
 		army_damage_mult = 0.75
 		army_health = 0.25
@@ -675,9 +704,10 @@ trait_clone_soldier_infertile_full_potential = {
 
 trait_clone_soldier_fertile = {
 	cost = 0
-	opposites = { "trait_vat_grown" }
+	opposites = {
+		"trait_vat_grown"
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	improves_leaders = yes
@@ -692,18 +722,17 @@ trait_clone_soldier_fertile = {
 	}
 	immortal_leaders = no
 	infertile = no
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_clone_soldier_descendant.dds"
-
 	modifier = {
 		# Pop modifiers
-		pop_government_ethic_attraction = 0.20
-
+		pop_government_ethic_attraction = 0.2
 		# Leader modifiers
 		army_damage_mult = 0.2
 	}
@@ -743,8 +772,8 @@ trait_cave_dweller = {
 	}
 	icon = "gfx/interface/icons/traits/trait_cave_dweller.dds"
 	modifier = {
-		pop_growth_speed = -0.1
-		habitability_floor_add = 0.5
+		founder_species_growth_mult = -0.1
+		pop_environment_tolerance = 0.2
 		planet_jobs_minerals_produces_mult = 0.1
 	}
 	slave_cost = {
@@ -769,12 +798,12 @@ trait_cave_dweller = {
 trait_robot_cave_dweller = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_robot_aquatic" }
+	opposites = {
+		"trait_robot_aquatic"
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
-
 	species_potential_add = {
 		always = no
 	}
@@ -784,17 +813,18 @@ trait_robot_cave_dweller = {
 	species_possible_merge_add = {
 		always = no
 	}
-
-	allowed_archetypes = { MACHINE ROBOT }
+	allowed_archetypes = {
+		MACHINE
+		ROBOT
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/trait_robot_cave_dweller.dds"
 	custom_tooltip_with_modifiers = trait_robot_cave_dweller_tooltip
 	modifier = {
-		pop_growth_speed = -0.1
-		habitability_floor_add = 0.5
+		founder_species_growth_mult = -0.1
+		pop_environment_tolerance = 0.2
 		planet_jobs_minerals_produces_mult = 0.1
 	}
 	slave_cost = {
@@ -803,11 +833,15 @@ trait_robot_cave_dweller = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
+			from = {
+				has_mining_designation = yes
+			}
 		}
 		modifier = {
 			add = 0.5
-			from = { has_rural_designation = yes }
+			from = {
+				has_rural_designation = yes
+			}
 		}
 	}
 }
@@ -815,9 +849,11 @@ trait_robot_cave_dweller = {
 trait_perfected_genes = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { trait_fleeting trait_weak }
+	opposites = {
+		trait_fleeting
+		trait_weak
+	}
 	sorting_priority = 20
-
 	initial = no
 	randomized = no
 	species_potential_add = {
@@ -829,17 +865,17 @@ trait_perfected_genes = {
 	species_possible_merge_add = {
 		always = no
 	}
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	ai_weight = {
 		weight = 0
 	}
-
 	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
-
 	modifier = {
-		pop_environment_tolerance = 0.10
-		army_health = 0.20
+		pop_environment_tolerance = 0.1
+		army_health = 0.2
 		leader_lifespan_add = 20
 	}
 }

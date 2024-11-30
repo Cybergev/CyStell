@@ -11,6 +11,7 @@ ethic_gestalt_consciousness = {
 	category_value = 0
 	use_for_pops = no
 	country_modifier = {
+		country_unity_produces_mult = 0.25
 		country_war_exhaustion_mult = -0.25
 		country_influence_produces_mult = 0.25
 		edicts_upkeep_mult= -0.50

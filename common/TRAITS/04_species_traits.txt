@@ -1158,10 +1158,8 @@ trait_latent_psionic = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_produces_mult = 0.10
+		planet_jobs_upkeep_mult = -0.10
 	}
 	slave_cost = {
 		energy = 1500
@@ -1203,11 +1201,10 @@ trait_psionic = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_unity_produces_mult = 0.10
-		pop_happiness = 0.05
+		planet_jobs_produces_mult = 0.10
+		planet_jobs_upkeep_mult = -0.10
+		army_damage_mult = 0.10
+		pop_happiness = 0.10
 	}
 	slave_cost = {
 		energy = 1500
