@@ -64,3 +64,121 @@ dispose_remains_planet_dec = {
 		weight = 0
 	}
 }
+
+# Repair Shattered Ring
+construkt_orbital_ring_project = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+	enactment_time = 720
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			influence = 50
+		}
+	}
+	allow = {
+		owner = {
+			has_technology = tech_orbital_ring_tier_1
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_planet"
+			is_surveyed = {
+				# prevent leaking habitability information
+				who = this
+				status = yes
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_anomaly"
+			NOT = {
+				has_anomaly = yes
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_colonized_planet_orbital_ring"
+			is_colony = yes
+			exists = owner
+			exists = controller
+			controller = {
+				is_same_value = owner
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_hostile_or_primitive"
+			NOR = {
+				planet_is_hostile_or_crisis = yes
+				AND = {
+					exists = owner
+					owner = {
+						is_country_type = primitive
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#can_build_megastructure_on_planet = yes
+			NOR = {
+				has_planet_flag = has_megastructure
+				has_planet_flag = ruined_orbital_ring_planet
+				solar_system = {
+					has_star_flag = ring_world_built
+				}
+			}
+			OR = {
+				is_artificial = no
+				is_planet_class = "pc_habitat"
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOR = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		if = {
+			limit = {
+				from = {
+					is_ai = yes
+				}
+			}
+			num_pops >= 25
+		}
+	}
+	potential = {
+		hidden_trigger = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+	effect = {
+		save_event_target_as = orbital_ring_planet
+		set_planet_flag = has_megastructure
+		if = {
+			limit = {
+				has_orbital_station = yes
+			}
+			orbital_station = {
+				dismantle = yes
+			}
+		}
+		create_starbase = {
+			size = orbital_ring_tier_1
+			owner = FROM
+			effect = {
+			}
+		}
+		from = {
+			country_event = {
+				id = tutorial.2121
+			}
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}

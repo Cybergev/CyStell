@@ -1,0 +1,54 @@
+
+civic_galactic_sovereign = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_galactic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_galactic_sovereign # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_civics_influence_produces_add = 5
+		diplo_weight_mult = 0.5
+		envoys_add = 1
+		country_government_civic_points_add = 1
+	}
+}
+
+civic_galactic_sovereign_megacorp = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_galactic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_galactic_sovereign_megacorp # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_civics_influence_produces_add = 5
+		diplo_weight_mult = 0.5
+		envoys_add = 1
+		country_government_civic_points_add = 1
+		trade_value_mult = 0.25
+	}
+}
+
+civic_psionic_sovereign = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_psionic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_psionic_sovereign # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_civics_influence_produces_add = 5
+		diplo_weight_mult = 0.5
+		envoys_add = 1
+		country_government_civic_points_add = 1
+		country_unity_produces_mult = 0.25
+		pop_government_ethic_attraction = 0.25
+	}
+}

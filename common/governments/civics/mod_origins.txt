@@ -73,27 +73,27 @@ origin_subterranean_machines = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_subterranean.dds"
 	picture = GFX_origin_subterranean
-	flags = { custom_start_screen }
+	flags = {
+		custom_start_screen
+	}
 	playable = {
 		has_overlord_dlc = yes
 	}
-
 	description = "origin_tooltip_robot_subterranean_effects"
-
 	advanced_start = yes
-
 	potential = {
-		species_archetype = { value = MACHINE }
+		species_archetype = {
+			value = MACHINE
+		}
 	}
-
 	possible = {
-		species_archetype = { value = MACHINE }
+		species_archetype = {
+			value = MACHINE
+		}
 	}
-
 	traits = {
 		trait = trait_robot_cave_dweller
 	}
-
 	modifier = {
 		planet_orbital_bombardment_damage = -0.5
 		planet_structures_cost_mult = 0.1
@@ -101,8 +101,50 @@ origin_subterranean_machines = {
 		mining_district_housing_add = 3
 		mining_district_buildings_add = 0.5
 	}
-
 	random_weight = {
 		base = 5
+	}
+}
+
+origin_overtuned = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_overtuned.dds"
+	picture = GFX_origin_overtuned
+	playable = {
+		has_toxoids = yes
+	}
+	possible = {
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+			}
+		}
+		civics = {
+			NOR = {
+				text = civic_tooltip_not_natural_design
+				value = civic_natural_design
+				value = civic_hive_natural_design
+			}
+		}
+		species_archetype = {
+			NOT = {
+				value = MACHINE
+			}
+		}
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+	description = "origin_tooltip_overtuned_effects"
+	flags = {
+		custom_start_screen
+	}
+	#	feature_flags = {
+	#		advanced_gene_modding
+	#		add_advanced_traits
+	#	}
+	blocks_random_machine_empire_generation = yes
+	random_weight = {
+		base = 0
 	}
 }

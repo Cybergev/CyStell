@@ -1,0 +1,22 @@
+tr_harmony_finish = {
+	modifier = {
+		planetary_ascension_cost_mult = -0.15
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		name = tr_harmony_federations_finish
+		inherit_icon = yes
+		inherit_name = yes
+		custom_tooltip = tr_harmony_federations_finish_desc
+		trigger = {
+			has_federations_dlc = yes
+		}
+		modifier = {
+			planetary_ascension_cost_mult = -0.15
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}

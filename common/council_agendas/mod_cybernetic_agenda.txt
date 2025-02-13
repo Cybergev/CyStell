@@ -1,0 +1,213 @@
+@base_tradition_agenda_cost = 7000
+@ascension_agenda_cost = 3500# Same as short_agenda_cost from traditions
+@ascension_agenda_cooldown = 1080# 3 Years
+agenda_cybernetic_advantage = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_cybernetics_adopt
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		is_machine_empire = no
+		NOR = {
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			is_individual_machine = yes
+		}
+	}
+	modifier = {
+		planet_pops_cyborgs_upkeep_mult = -0.05
+		pop_growth_speed = 0.025
+	}
+	finish_modifier = agenda_cybernetic_advantage_finish
+}
+
+agenda_flesh_is_weak = {
+	agenda_cost = @ascension_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	allow = {
+		OR = {
+			has_ascension_perk = ap_the_flesh_is_weak
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		is_gestalt = no
+		NOR = {
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			is_individual_machine = yes
+		}
+		NAND = {
+			has_technology = tech_powered_exoskeletons
+			has_technology = tech_integrated_cybernetics
+			has_technology = tech_neuro_quantum_links
+		}
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_powered_exoskeletons = {
+				add_tech_progress = {
+					tech = tech_powered_exoskeletons
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_integrated_cybernetics = {
+				add_tech_progress = {
+					tech = tech_integrated_cybernetics
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_neuro_quantum_links = {
+				add_tech_progress = {
+					tech = tech_neuro_quantum_links
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+agenda_organo_machine_interfacing = {
+	agenda_cost = @ascension_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	allow = {
+		has_ascension_perk = ap_organo_machine_interfacing
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		is_hive_empire = yes
+		NOR = {
+			has_synthetic_ascension = yes
+			is_natural_design_empire = yes
+			is_individual_machine = yes
+		}
+		NAND = {
+			has_technology = tech_powered_exoskeletons
+			has_technology = tech_integrated_cybernetics
+			has_technology = tech_neuro_quantum_links
+		}
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_powered_exoskeletons = {
+				add_tech_progress = {
+					tech = tech_powered_exoskeletons
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_integrated_cybernetics = {
+				add_tech_progress = {
+					tech = tech_integrated_cybernetics
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_neuro_quantum_links = {
+				add_tech_progress = {
+					tech = tech_neuro_quantum_links
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+agenda_cybernetic_advantage_assimilator = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_cybernetics_assimilator_adopt
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		has_civic = civic_machine_assimilator
+		has_synthetic_ascension = no
+	}
+	modifier = {
+		planet_pops_cyborgs_upkeep_mult = -0.05
+		pop_growth_speed = 0.05
+	}
+	finish_modifier = agenda_cybernetic_advantage_assimilator_finish
+}
+
+agenda_organo_machine_interfacing_assimilator = {
+	agenda_cost = @ascension_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	allow = {
+		has_ascension_perk = ap_organo_machine_interfacing_assimilator
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_machine_age_dlc = yes
+		}
+		has_civic = civic_machine_assimilator
+		has_synthetic_ascension = no
+		NAND = {
+			has_technology = tech_powered_exoskeletons
+			has_technology = tech_integrated_cybernetics
+			has_technology = tech_neuro_quantum_links
+		}
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_powered_exoskeletons = {
+				add_tech_progress = {
+					tech = tech_powered_exoskeletons
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_integrated_cybernetics = {
+				add_tech_progress = {
+					tech = tech_integrated_cybernetics
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_neuro_quantum_links = {
+				add_tech_progress = {
+					tech = tech_neuro_quantum_links
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}

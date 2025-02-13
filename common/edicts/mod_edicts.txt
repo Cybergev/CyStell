@@ -1,0 +1,38 @@
+form_galcom = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	potential = {
+		is_galactic_community_formed = no
+		count_playable_country = {
+			count = 1
+		}
+	}
+	allow = {
+		is_galactic_community_formed = no
+		count_playable_country = {
+			count = 1
+		}
+	}
+	effect = {
+		set_global_flag = galactic_community_founded
+		if = {
+			limit = {
+				has_global_flag = galcom_form_failed
+			}
+			remove_global_flag = galcom_form_failed
+		}
+		add_to_galactic_community = yes
+	}
+	on_disabled = {
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

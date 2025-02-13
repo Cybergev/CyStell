@@ -1,5 +1,4 @@
 ### Crisis Corvette
-
 # M1S1
 ship_section_template = {
 	key = "CRISIS_CORVETTE_M1S1"
@@ -8,8 +7,10 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "crisis_corvette_M1S1_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { gunship artillery }
-
+	ai_tags = {
+		gunship
+		artillery
+	}
 	component_slot = {
 		name = "SMALL_GUN_01"
 		template = "small_turret"
@@ -20,7 +21,6 @@ ship_section_template = {
 		template = "medium_turret"
 		locatorname = "medium_gun_01"
 	}
-
 	small_utility_slots = 3
 	aux_utility_slots = 2
 }
@@ -33,8 +33,9 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "crisis_corvette_S3_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { brawler }
-
+	ai_tags = {
+		brawler
+	}
 	component_slot = {
 		name = "SMALL_GUN_01"
 		template = "small_turret"
@@ -50,13 +51,11 @@ ship_section_template = {
 		template = "small_turret"
 		locatorname = "small_gun_03"
 	}
-
 	small_utility_slots = 3
 	aux_utility_slots = 2
 }
 
 ### Crisis Destroyer
-
 # 1M1G1S1P
 ship_section_template = {
 	key = "CRISIS_DESTROYER_1M2S1M"
@@ -65,8 +64,11 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "crisis_destroyer_1M2S1M_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { brawler explosive energy_torpedoes }
-
+	ai_tags = {
+		brawler
+		explosive
+		energy_torpedoes
+	}
 	component_slot = {
 		name = "MEDIUM_GUN_01"
 		template = "medium_turret"
@@ -87,7 +89,6 @@ ship_section_template = {
 		template = "point_defence_turret"
 		locatorname = "small_gun_02"
 	}
-
 	medium_utility_slots = 3
 	aux_utility_slots = 2
 }
@@ -100,8 +101,10 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "crisis_destroyer_1L2S_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { gunship artillery }
-
+	ai_tags = {
+		gunship
+		artillery
+	}
 	component_slot = {
 		name = "LARGE_GUN_01"
 		template = "large_turret"
@@ -117,7 +120,6 @@ ship_section_template = {
 		template = "small_turret"
 		locatorname = "small_gun_02"
 	}
-
 	medium_utility_slots = 3
 	aux_utility_slots = 2
 }
@@ -130,7 +132,6 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "crisis_cruiser_hull_entity"
 	icon = "GFX_ship_part_core_mid"
-
 	component_slot = {
 		name = "LARGE_GUN_01"
 		template = "large_turret"
@@ -156,7 +157,6 @@ ship_section_template = {
 		template = "small_turret"
 		locatorname = "small_gun_02"
 	}
-
 	medium_utility_slots = 6
 	aux_utility_slots = 2
 }
@@ -169,7 +169,6 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "star_eater_ship_entity"
 	icon = "GFX_ship_part_core_mid"
-
 	component_slot = {
 		name = "PLANET_KILLER_GUN_01"
 		template = "invisible_planet_killer_fixed"
@@ -181,18 +180,18 @@ ship_section_template = {
 		locatorname = "core"
 	}
 	component_slot = {
-		name = "EXTRA_LARGE_GUN_01"
-		template = "invisible_extra_large_fixed"
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
 		locatorname = "core"
 	}
 	component_slot = {
-		name = "EXTRA_LARGE_GUN_02"
-		template = "invisible_extra_large_fixed"
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
 		locatorname = "core"
 	}
 	component_slot = {
-		name = "EXTRA_LARGE_GUN_03"
-		template = "invisible_extra_large_fixed"
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
 		locatorname = "core"
 	}
 	component_slot = {

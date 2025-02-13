@@ -1,0 +1,129 @@
+civic_hive_upkeep_twister = {
+	playable = {
+		host_has_dlc = "Galactic Paragons"
+	}
+	ai_playable = {
+		host_has_dlc = "Galactic Paragons"
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	description = "civic_tooltip_hive_upkeep_twister_effects"
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	possible = {
+	}
+	modifier = {
+		leader_initial_skill = 1
+		leader_trait_selection_options_add = 1
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_hive_natural_neural_network = {
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	description = "civic_tooltip_natural_neural_network_effects"
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+		num_tech_alternatives_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_hive_pooled_knowledge = {
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = devouring_swarm
+			}
+		}
+	}
+	modifier = {
+		species_leader_exp_gain = 0.1
+		leader_trait_selection_options_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_hive_empath = {
+	playable = {
+		host_has_dlc = "Federations"
+	}
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_hive_devouring_swarm
+			}
+		}
+		origin = {
+			NOT = {
+				value = origin_necrophage
+			}
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	description = "civic_tooltip_empath_effects"
+	modifier = {
+		envoys_add = 2
+		diplo_weight_mult = 0.25
+		country_trust_cap_add = 50
+		envoy_improve_relations_mult = 0.25
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_hive_subsumed_will = {
+	potential = {
+		authority = {
+			value = auth_hive_mind
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	description = "civic_hive_subsumed_will_effects"
+	modifier = {
+		empire_size_pops_mult = -0.5
+		planet_resettlement_unemployed_mult = 0.5
+		country_edict_fund_mult = 0.5
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}

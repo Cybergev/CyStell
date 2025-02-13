@@ -1,10 +1,20 @@
 NSpecies = {
 	MIN_ETHIC_POINTS = 4
 }
+
+NShip = {
+	JUMP_DRIVE_RANGE = 200
+}
+
 NGameplay = {
+	DEFAULT_TRAIT_OPTIONS_ON_LEVEL_UP = 10	# Default number of selectable non-upgrade trait options before modifiers available on level up
+	NUM_DESTINY_TRAIT_OPTIONS = 10	# Default number of destiny traits to select from
+	NON_PARAGON_TRAIT_OPTIONS_ON_LEVEL_UP = 10	# Number of non-upgrade trait options available on level up without Galactic Paragons
+	MAX_BASIC_TRAITS = 3	# How many basic traits you can have before you only get the option to level them up
+	MAX_VETERAN_TRAITS = 3	# How many veteran traits you can have before you only get the option to level them up
 	ETHOS_MAX_POINTS = 4
 	GOVERNMENT_CIVIC_POINTS_BASE = 3
 	RELIC_VIEW_SLOTS_PER_ROW = 5
-	RELIC_VIEW_SLOTS_PER_ROW_WIDE	= 4
+	RELIC_VIEW_SLOTS_PER_ROW_WIDE = 4
 	RELIC_VIEW_DEFAULT_ROW_COUNT = 2
 }

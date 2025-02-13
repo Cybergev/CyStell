@@ -1,5 +1,7 @@
 councilor_technocracy = {
-	leader_class = { scientist }
+	leader_class = {
+		scientist
+	}
 	is_leader_possible = {
 		leader_class = scientist
 	}
@@ -13,7 +15,10 @@ councilor_technocracy = {
 }
 
 councilor_dark_consortium = {
-	leader_class = { official scientist }
+	leader_class = {
+		official
+		scientist
+	}
 	is_leader_possible = {
 		OR = {
 			leader_class = official
@@ -30,7 +35,10 @@ councilor_dark_consortium = {
 }
 
 councilor_dark_consortium_corporate = {
-	leader_class = { official scientist }
+	leader_class = {
+		official
+		scientist
+	}
 	is_leader_possible = {
 		OR = {
 			leader_class = official
@@ -47,7 +55,9 @@ councilor_dark_consortium_corporate = {
 }
 
 councilor_functional_architecture = {
-	leader_class = { official }
+	leader_class = {
+		official
+	}
 	is_leader_possible = {
 		leader_class = official
 	}
@@ -57,6 +67,54 @@ councilor_functional_architecture = {
 		planet_structures_upkeep_mult = -0.02
 		planet_building_build_speed_mult = 0.02
 	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_ruler_hive_mind = {
+	leader_class = {
+		official
+		commander
+		scientist
+	}
+	possible = {
+		always = no
+	}
+	modifier = {
+		country_unity_produces_mult = 0.025
+		country_war_exhaustion_mult = -0.025
+		country_influence_produces_mult = 0.025
+		country_edict_fund_mult = 0.025
+		edicts_upkeep_mult = -0.025
+		edicts_cost_mult = -0.025
+		intel_encryption_mult = 0.025
+	}
+	icon = "GFX_icon_councilor_ruler"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_ruler_machine_intelligence = {
+	leader_class = {
+		official
+		commander
+		scientist
+	}
+	possible = {
+		always = no
+	}
+	modifier = {
+		empire_size_penalty_mult = -0.025
+		country_war_exhaustion_mult = -0.025
+		country_influence_produces_mult = 0.025
+		country_edict_fund_mult = 0.025
+		edicts_upkeep_mult = -0.025
+		edicts_cost_mult = -0.025
+		intel_encryption_mult = 0.025
+	}
+	icon = "GFX_icon_councilor_ruler"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}

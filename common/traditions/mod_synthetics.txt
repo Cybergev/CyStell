@@ -1,0 +1,62 @@
+tr_synthetics_finish = {
+	on_enabled = {
+		hidden_effect = {
+			refresh_portraits = character
+			if = {
+				limit = {
+					has_machine_age_dlc = yes
+					has_country_flag = synthetics_traditions_unlocked
+				}
+				country_event = {
+					id = synth.500
+					days = 180
+				}
+			}
+		}
+	}
+	modifier = {
+		ROBOT_species_trait_picks_add = 2
+		ROBOT_species_trait_points_add = 2
+		modify_species_cost_mult = -0.5
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		name = tr_synthetics_finish_machine
+		inherit_name = no
+		inherit_icon = yes
+		inherit_effects = no
+		custom_tooltip_with_modifiers = tr_synthetics_finish_machine_desc
+		trigger = {
+			is_machine_empire = yes
+		}
+		on_enabled = {
+			hidden_effect = {
+				machine_synthetic_leader_effect = yes
+			}
+		}
+		modifier = {
+			MACHINE_species_trait_picks_add = 2
+			MACHINE_species_trait_points_add = 2
+			modify_species_cost_mult = -0.5
+			ascension_perks_add = 1
+		}
+		custom_tooltip = AUTH_MACHINE_ASCENSION_RESTRICTIONS
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		name = tr_synthetics_finish_situation
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_machine_age_dlc = yes
+			NOR = {
+				has_country_flag = synthetics_traditions_unlocked
+				has_origin = origin_synthetic_fertility
+			}
+		}
+		custom_tooltip = tr_synthetics_finish_situation_effects
+		custom_tooltip = AUTH_MACHINE_ASCENSION_RESTRICTIONS
+	}
+}

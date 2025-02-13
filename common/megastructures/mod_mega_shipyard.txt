@@ -4,7 +4,10 @@ mega_shipyard_0 = {
 	construction_entity = "construction_platform_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
+	entity_offset = {
+		x = -27
+		y = -27
+	}
 	build_time = 1800
 	resources = {
 		category = megastructures
@@ -12,14 +15,13 @@ mega_shipyard_0 = {
 			alloys = 3000
 			unity = 2500
 		}
-
 		upkeep = {
 			energy = 5
 		}
 	}
-
-	prerequisites = { "tech_mega_shipyard" }
-
+	prerequisites = {
+		"tech_mega_shipyard"
+	}
 	possible = {
 		exists = starbase
 		custom_tooltip = {
@@ -46,7 +48,6 @@ mega_shipyard_0 = {
 			}
 		}
 	}
-
 	placement_rules = {
 		planet_possible = {
 			custom_tooltip = {
@@ -55,34 +56,43 @@ mega_shipyard_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_anomaly"
-				NOT = { has_anomaly = yes }
+				NOT = {
+					has_anomaly = yes
+				}
 			}
 		}
 	}
-
+	upgrade_from = {
+		mega_shipyard_restored
+	}
 	# root = system
 	# from = country
 	ai_weight = {
 		factor = 15
-
 		modifier = {
 			factor = 0.1
-			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+			starbase = {
+				NOT = {
+					has_starbase_size >= starbase_starfortress
+				}
+			}
 		}
-
 		modifier = {
 			factor = 0.1
 			any_neighbor_system = {
 				exists = owner
 				NOT = {
-					owner = { is_same_value = from }
+					owner = {
+						is_same_value = from
+					}
 				}
 			}
 		}
 	}
-
-	on_build_start = {}
-	on_build_cancel = {}
+	on_build_start = {
+	}
+	on_build_cancel = {
+	}
 	on_build_complete = {
 		from = {
 			if = {
@@ -96,145 +106,13 @@ mega_shipyard_0 = {
 		}
 		fromfrom.planet = {
 			if = {
-				limit = { has_orbital_station = yes }
+				limit = {
+					has_orbital_station = yes
+				}
 				orbital_station = {
 					dismantle = yes
 				}
 			}
-		}
-	}
-}
-
-# mega_shipyard 1
-mega_shipyard_1 = {
-	entity = "mega_shipyard_01_stage_1_entity"
-	construction_entity = "mega_shipyard_01_stage_1_entity"
-	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
-	build_time = 1800
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 10000
-			unity = 2500
-		}
-
-		upkeep = {
-			energy = 10
-		}
-	}
-
-	upgrade_from = {
-		mega_shipyard_0
-	}
-
-	prerequisites = { "tech_mega_shipyard" }
-
-	ship_modifier = {
-		ship_starting_experience_add = 100
-	}
-
-	station_modifier = {
-		starbase_shipyard_capacity_add = 5
-	}
-
-	country_modifier = {
-		starbase_shipyard_build_speed_mult = 0.33
-	}
-
-	on_build_complete = {
-		from = { country_event = { id = feda.1 } }
-	}
-}
-
-# mega_shipyard 2
-mega_shipyard_2 = {
-	entity = "mega_shipyard_01_stage_2_entity"
-	construction_entity = "mega_shipyard_01_stage_2_entity"
-	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
-	build_time = 1800
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 10000
-			unity = 2500
-		}
-
-		upkeep = {
-			energy = 20
-		}
-	}
-
-	upgrade_from = {
-		mega_shipyard_1
-	}
-
-	prerequisites = { "tech_mega_shipyard" }
-
-	ship_modifier = {
-		ship_starting_experience_add = 100
-	}
-
-	station_modifier = {
-		starbase_shipyard_capacity_add = 10
-	}
-
-	country_modifier = {
-		starbase_shipyard_build_speed_mult = 0.67
-	}
-
-	on_build_complete = {
-		from = { country_event = { id = feda.2 } }
-	}
-}
-
-# mega_shipyard 3
-mega_shipyard_3 = {
-	entity = "mega_shipyard_01_stage_3_entity"
-	construction_entity = "mega_shipyard_01_stage_3_entity"
-	portrait = "GFX_megastructure_mega_shipyard_background"
-	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
-	build_time = 1800
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 10000
-			unity = 2500
-		}
-
-		upkeep = {
-			energy = 40
-		}
-	}
-
-	upgrade_from = {
-		mega_shipyard_2
-	}
-
-	prerequisites = { "tech_mega_shipyard" }
-	show_prereqs = yes
-
-	ship_modifier = {
-		ship_starting_experience_add = 100
-	}
-
-	station_modifier = {
-		starbase_shipyard_capacity_add = 20
-	}
-
-	country_modifier = {
-		starbase_shipyard_build_speed_mult = 1
-	}
-
-	on_build_complete = {
-		set_star_flag = mega_shipyard_built
-		from = {
-			set_country_flag = has_built_or_repaired_megastructure
-			country_event = { id = feda.3 }
 		}
 	}
 }
@@ -245,27 +123,14 @@ mega_shipyard_permanently_ruined = {
 	construction_entity = "mega_shipyard_01_destroyed_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
+	entity_offset = {
+		x = -27
+		y = -27
+	}
 	show_galactic_map_icon = no
 	show_in_outliner = no
 	upgrade_from = {
 	}
-
-	potential = {
-		always = no
-	}
-}
-
-# Ruined mega shipyard
-mega_shipyard_ruined = {
-	entity = "mega_shipyard_01_destroyed_entity"
-	construction_entity = "mega_shipyard_01_destroyed_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
-	upgrade_from = {
-	}
-
 	potential = {
 		always = no
 	}
@@ -277,7 +142,10 @@ mega_shipyard_restored = {
 	construction_entity = "mega_shipyard_01_stage_3_entity"
 	portrait = "GFX_megastructure_mega_shipyard_background"
 	place_entity_on_planet_plane = no
-	entity_offset = { x = -27 y = -27 }
+	entity_offset = {
+		x = -27
+		y = -27
+	}
 	build_time = 3600
 	resources = {
 		category = megastructures
@@ -285,38 +153,32 @@ mega_shipyard_restored = {
 			alloys = 10000
 			unity = 3200
 		}
-
 		upkeep = {
 			energy = 40
 		}
 	}
-
 	upgrade_from = {
 		mega_shipyard_ruined
 	}
-
 	possible = {
-		from = { has_technology = tech_mega_engineering }
+		from = {
+			has_technology = tech_mega_engineering
+		}
 	}
-
 	ship_modifier = {
 		ship_starting_experience_add = 100
 	}
-
 	station_modifier = {
 		starbase_shipyard_capacity_add = 20
 	}
-
 	country_modifier = {
 		starbase_shipyard_build_speed_mult = 1
 	}
-
 	on_build_start = {
 		fromfrom = {
 			set_graphical_culture = root.from
 		}
 	}
-
 	on_build_complete = {
 		set_star_flag = mega_shipyard_built
 		every_system_ambient_object = {
@@ -327,7 +189,9 @@ mega_shipyard_restored = {
 		}
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
-			country_event = { id = feda.6 }
+			country_event = {
+				id = feda.6
+			}
 		}
 	}
 }

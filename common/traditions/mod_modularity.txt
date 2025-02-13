@@ -31,24 +31,117 @@ tr_modularity_adopt = {
 			}
 		}
 	}
-	triggered_modifier = {
-		potential = {
-			has_country_flag = synthetic_empire
-		}
-		MACHINE_species_trait_points_add = 1
-		mult = modifier:ROBOT_species_trait_points_add
-	}
-	triggered_modifier = {
-		potential = {
-			has_country_flag = synthetic_empire
-		}
-		MACHINE_species_trait_picks_add = 1
-		mult = modifier:ROBOT_species_trait_picks_add
-	}
 	modifier = {
+		MACHINE_species_trait_points_add = 2
+		MACHINE_species_trait_picks_add = 2
 		planet_metallurgists_sr_living_metal_produces_add = 0.2
 	}
 	unlocks_agenda = agenda_modularity_reshape_form
+}
+
+tr_modularity_1 = {
+	possible = {
+		has_tradition = tr_modularity_adopt
+	}
+	modifier = {
+		MACHINE_species_trait_points_add = 2
+		MACHINE_species_trait_picks_add = 2
+		auto_mod_monthly_add = 10
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_modularity_2 = {
+	possible = {
+		has_tradition = tr_modularity_1
+	}
+	tradition_swap = {
+		name = tr_modularity_2_gestalt
+		inherit_icon = yes
+		trigger = {
+			is_gestalt = yes
+		}
+		modifier = {
+			MACHINE_species_trait_points_add = 2
+			MACHINE_species_trait_picks_add = 2
+			planet_pop_assemblers_alloys_upkeep_add = -1
+			planet_pop_assemblers_sr_living_metal_upkeep_add = 1
+		}
+		custom_tooltip_with_modifiers = tr_modularity_2_modifier_gestalt_desc
+	}
+	modifier = {
+		MACHINE_species_trait_points_add = 1
+		MACHINE_species_trait_picks_add = 1
+		planet_pop_assemblers_alloys_upkeep_add = -1
+		planet_pop_assemblers_sr_living_metal_upkeep_add = 1
+	}
+	custom_tooltip_with_modifiers = tr_modularity_2_modifier_desc
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_modularity_3 = {
+	possible = {
+		has_tradition = tr_modularity_1
+	}
+	tradition_swap = {
+		name = tr_modularity_3_gestalt
+		inherit_icon = yes
+		trigger = {
+			is_gestalt = yes
+		}
+		modifier = {
+			planet_stability_add = 10
+			army_damage_mult = 0.5
+		}
+		custom_tooltip_with_modifiers = tr_modularity_3_modifier_gestalt_desc
+	}
+	modifier = {
+		planet_stability_add = 10
+		army_damage_mult = 0.5
+	}
+	custom_tooltip_with_modifiers = tr_modularity_3_modifier_desc
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_modularity_4 = {
+	possible = {
+		has_tradition = tr_modularity_2
+	}
+	tradition_swap = {
+		inherit_name = yes
+		inherit_icon = yes
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		modifier = {
+			planet_bio_trophies_unity_produces_add = 1
+		}
+	}
+	custom_tooltip_with_modifiers = tr_modularity_4_modifier_desc
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_modularity_5 = {
+	possible = {
+		has_tradition = tr_modularity_3
+	}
+	modifier = {
+		MACHINE_species_trait_points_add = 2
+		MACHINE_species_trait_picks_add = 2
+		modify_species_cost_mult = -0.5
+	}
+	custom_tooltip_with_modifiers = tr_modularity_5_modifier_desc
+	ai_weight = {
+		factor = 1000
+	}
 }
 
 tr_modularity_finish = {
@@ -69,7 +162,8 @@ tr_modularity_finish = {
 		}
 	}
 	modifier = {
-		planet_jobs_upkeep_mult = -0.15
+		MACHINE_species_trait_points_add = 2
+		MACHINE_species_trait_picks_add = 2
 		ascension_perks_add = 1
 	}
 }

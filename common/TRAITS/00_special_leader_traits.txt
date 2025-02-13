@@ -1,7 +1,6 @@
 ##################
 # SPECIAL TRAITS #
 ##################
-
 leader_trait_shroud_age = {
 	inline_script = {
 		script = trait/icon
@@ -14,7 +13,11 @@ leader_trait_shroud_age = {
 	self_modifier = {
 		leader_lifespan_add = 40
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 }
@@ -33,7 +36,7 @@ leader_trait_erudite = {
 		potential = {
 			is_ruler = yes
 		}
-		num_tech_alternatives_add = 1
+		council_agenda_progress_speed = 0.1
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -41,8 +44,8 @@ leader_trait_erudite = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_fire_rate_mult = 0.10
-		ship_disengage_chance_mult = 0.10
+		ship_fire_rate_mult = 0.1
+		ship_disengage_chance_mult = 0.1
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -50,8 +53,8 @@ leader_trait_erudite = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_damage_taken_mult = -0.10
-		army_disengage_chance_mult = 0.10
+		army_damage_taken_mult = -0.1
+		army_disengage_chance_mult = 0.1
 	}
 	# Scientist - Self Modifier
 	triggered_self_modifier = {
@@ -59,7 +62,7 @@ leader_trait_erudite = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		species_leader_exp_gain = 0.10
+		species_leader_exp_gain = 0.1
 		leader_trait_selection_options_add = 1
 	}
 	# Official - GalCom Modifier
@@ -83,8 +86,8 @@ leader_trait_erudite = {
 		potential = {
 			is_ruler = no
 		}
-		planet_pops_upkeep_mult = -0.10
-		pop_amenities_usage_mult = -0.10
+		planet_pops_upkeep_mult = -0.1
+		pop_amenities_usage_mult = -0.1
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
@@ -94,7 +97,11 @@ leader_trait_erudite = {
 		planet_pops_upkeep_mult = -0.05
 		pop_amenities_usage_mult = -0.05
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 }
@@ -122,9 +129,9 @@ leader_trait_cyborg = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_weapon_damage = 0.10
+		ship_weapon_damage = 0.1
 		ship_weapon_range_mult = 0.15
-		ship_orbital_bombardment_mult = 0.20
+		ship_orbital_bombardment_mult = 0.2
 	}
 	# Commander - Self Modifier
 	triggered_self_modifier = {
@@ -148,7 +155,7 @@ leader_trait_cyborg = {
 			is_ruler = no
 			leader_class = official
 		}
-		diplo_weight_technology_mult = 0.10
+		diplo_weight_technology_mult = 0.1
 	}
 	# Official - Federation Modifier
 	triggered_federation_modifier = {
@@ -163,9 +170,9 @@ leader_trait_cyborg = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
@@ -199,7 +206,11 @@ leader_trait_cyborg = {
 		}
 		leaders_upkeep_mult = -0.25
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 	notify_on_gained = no
@@ -227,8 +238,8 @@ leader_trait_synthetic = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_fire_rate_mult = 0.10
-		ship_armor_hardening_add = 0.10
+		ship_fire_rate_mult = 0.1
+		ship_armor_hardening_add = 0.1
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -236,8 +247,8 @@ leader_trait_synthetic = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_damage_mult = 0.10
-		army_collateral_damage_mult = 0.10
+		army_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -245,8 +256,8 @@ leader_trait_synthetic = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_anomaly_research_speed_mult = 0.10
-		ship_archaeological_site_excavation_speed_mult = 0.10
+		ship_anomaly_research_speed_mult = 0.1
+		ship_archaeological_site_excavation_speed_mult = 0.1
 	}
 	triggered_modifier = {
 		potential = {
@@ -254,7 +265,7 @@ leader_trait_synthetic = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_astral_rift_speed_mult = 0.10
+		ship_astral_rift_speed_mult = 0.1
 	}
 	# Official - GalCom Modifier
 	triggered_galcom_modifier = {
@@ -294,9 +305,13 @@ leader_trait_synthetic = {
 			}
 		}
 		leader_lifespan_add = 20
-		species_leader_exp_gain = 0.10
+		species_leader_exp_gain = 0.1
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	opposites = {
 		leader_trait_psionic
 		leader_trait_chosen
@@ -320,8 +335,15 @@ leader_trait_psionic = {
 		potential = {
 			is_ruler = yes
 		}
-		pop_government_ethic_attraction = 0.10
+		pop_government_ethic_attraction = 0.1
 		country_ruler_influence_produces_add = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.1
+		council_agenda_progress_speed = 0.1
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -329,8 +351,8 @@ leader_trait_psionic = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_weapon_damage = 0.10
-		ship_shield_hardening_add = 0.10
+		ship_weapon_damage = 0.1
+		ship_shield_hardening_add = 0.1
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -338,8 +360,8 @@ leader_trait_psionic = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_morale = 0.10
-		army_morale_damage_mult = 0.10
+		army_morale = 0.1
+		army_morale_damage_mult = 0.1
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -347,7 +369,7 @@ leader_trait_psionic = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		science_ship_survey_speed = 0.10
+		science_ship_survey_speed = 0.1
 		ship_archaeological_site_clues_add = 1
 	}
 	triggered_modifier = {
@@ -364,7 +386,7 @@ leader_trait_psionic = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.10
+		resolutions_cost_mult = -0.1
 	}
 	# Official - Federation Modifier
 	triggered_federation_modifier = {
@@ -379,7 +401,7 @@ leader_trait_psionic = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_unity_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.1
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
@@ -388,7 +410,11 @@ leader_trait_psionic = {
 		}
 		planet_jobs_unity_produces_mult = 0.05
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 	notify_on_gained = no
@@ -409,8 +435,15 @@ leader_trait_chosen = {
 		potential = {
 			is_ruler = yes
 		}
-		pop_government_ethic_attraction = 0.20
-		country_ruler_influence_produces_add = 1.0
+		pop_government_ethic_attraction = 0.2
+		country_ruler_influence_produces_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.2
+		council_agenda_progress_speed = 0.2
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -418,8 +451,8 @@ leader_trait_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_weapon_damage = 0.20
-		ship_shield_hardening_add = 0.20
+		ship_weapon_damage = 0.2
+		ship_shield_hardening_add = 0.2
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -427,8 +460,8 @@ leader_trait_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_morale = 0.20
-		army_morale_damage_mult = 0.20
+		army_morale = 0.2
+		army_morale_damage_mult = 0.2
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -436,7 +469,7 @@ leader_trait_chosen = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		science_ship_survey_speed = 0.20
+		science_ship_survey_speed = 0.2
 		ship_archaeological_site_clues_add = 2
 	}
 	triggered_modifier = {
@@ -453,7 +486,7 @@ leader_trait_chosen = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.20
+		resolutions_cost_mult = -0.2
 	}
 	# Official - Federation Modifier
 	triggered_federation_modifier = {
@@ -469,16 +502,20 @@ leader_trait_chosen = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_unity_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.2
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_unity_produces_mult = 0.10
+		planet_jobs_unity_produces_mult = 0.1
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 }
@@ -499,10 +536,17 @@ leader_trait_composer_chosen = {
 			is_ruler = yes
 		}
 		leader_lifespan_add = 50
-		species_leader_exp_gain = 0.20
+		species_leader_exp_gain = 0.2
 		country_official_cap_add = 1
 		country_commander_cap_add = 1
 		country_scientist_cap_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.2
+		council_agenda_progress_speed = 0.2
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -510,8 +554,8 @@ leader_trait_composer_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_hull_regen_add_perc = 0.10
-		ship_armor_regen_add_perc = 0.20
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.2
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -519,8 +563,8 @@ leader_trait_composer_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_health = 0.40
-		army_damage_mult = 0.20
+		army_health = 0.4
+		army_damage_mult = 0.2
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -528,7 +572,7 @@ leader_trait_composer_chosen = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		science_ship_survey_speed = 0.20
+		science_ship_survey_speed = 0.2
 	}
 	# Scientist - Self Modifier
 	triggered_self_modifier = {
@@ -546,7 +590,7 @@ leader_trait_composer_chosen = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.10
+		resolutions_cost_mult = -0.1
 		resolution_category_ecology_vote_strength_mult = 0.25
 	}
 	# Official - Federation Modifier
@@ -574,7 +618,11 @@ leader_trait_composer_chosen = {
 		pop_growth_speed = 0.025
 		planet_jobs_produces_mult = 0.025
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	opposites = {
 		leader_trait_synthetic
 	}
@@ -597,8 +645,15 @@ leader_trait_instrument_chosen = {
 		potential = {
 			is_ruler = yes
 		}
-		pop_happiness = 0.20
-		trade_value_mult = 0.20
+		pop_happiness = 0.2
+		trade_value_mult = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.2
+		council_agenda_progress_speed = 0.2
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -606,10 +661,10 @@ leader_trait_instrument_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_speed_mult = 0.20
-		ship_windup_mult = -0.20
-		ship_emergency_ftl_mult = -0.20
-		ship_disengage_chance_mult = 0.20
+		ship_speed_mult = 0.2
+		ship_windup_mult = -0.2
+		ship_emergency_ftl_mult = -0.2
+		ship_disengage_chance_mult = 0.2
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -617,8 +672,8 @@ leader_trait_instrument_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_morale = 0.10
-		army_morale_damage_mult = 0.10
+		army_morale = 0.1
+		army_morale_damage_mult = 0.1
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -626,7 +681,7 @@ leader_trait_instrument_chosen = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		science_ship_survey_speed = 0.20
+		science_ship_survey_speed = 0.2
 	}
 	# Scientist - Self Modifier
 	triggered_self_modifier = {
@@ -642,7 +697,7 @@ leader_trait_instrument_chosen = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.10
+		resolutions_cost_mult = -0.1
 		resolution_category_commerce_vote_strength_mult = 0.25
 	}
 	# Official - Federation Modifier
@@ -659,7 +714,7 @@ leader_trait_instrument_chosen = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_slave_produces_mult = 0.20
+		planet_jobs_slave_produces_mult = 0.2
 		planet_stability_add = 5
 	}
 	# Any Class - Sector Modifier
@@ -667,10 +722,14 @@ leader_trait_instrument_chosen = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_slave_produces_mult = 0.10
+		planet_jobs_slave_produces_mult = 0.1
 		planet_stability_add = 2.5
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	opposites = {
 		leader_trait_synthetic
 	}
@@ -694,8 +753,15 @@ leader_trait_eater_chosen = {
 			is_ruler = yes
 		}
 		ships_upkeep_mult = -0.1
-		starbase_shipyard_build_cost_mult = -0.10
-		starbase_shipyard_build_speed_mult = 0.20
+		starbase_shipyard_build_cost_mult = -0.1
+		starbase_shipyard_build_speed_mult = 0.2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.2
+		council_agenda_progress_speed = 0.2
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -703,7 +769,7 @@ leader_trait_eater_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_weapon_damage = 0.40
+		ship_weapon_damage = 0.4
 		ship_accuracy_add = 10
 	}
 	# Commander - Army Modifier
@@ -712,9 +778,9 @@ leader_trait_eater_chosen = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_morale = 0.40
-		army_morale_damage_mult = 0.40
-		army_damage_mult = 0.40
+		army_morale = 0.4
+		army_morale_damage_mult = 0.4
+		army_damage_mult = 0.4
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -722,7 +788,7 @@ leader_trait_eater_chosen = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		science_ship_survey_speed = 0.10
+		science_ship_survey_speed = 0.1
 		ship_archaeological_site_clues_add = 1
 	}
 	triggered_modifier = {
@@ -739,7 +805,7 @@ leader_trait_eater_chosen = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.10
+		resolutions_cost_mult = -0.1
 		resolution_category_mutualdefense_vote_strength_mult = 0.25
 	}
 	# Official - Federation Modifier
@@ -765,7 +831,11 @@ leader_trait_eater_chosen = {
 		}
 		job_soldier_per_pop = 0.05
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	opposites = {
 		leader_trait_synthetic
 	}
@@ -788,9 +858,16 @@ leader_trait_whisperers_chosen = {
 		potential = {
 			is_ruler = yes
 		}
-		espionage_operation_cost_mult = -0.20
+		espionage_operation_cost_mult = -0.2
 		country_ruler_influence_produces_add = 1
 		intel_encryption_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		pop_government_ethic_attraction = 0.2
+		council_agenda_progress_speed = 0.2
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -799,7 +876,7 @@ leader_trait_whisperers_chosen = {
 			leader_class = commander
 		}
 		ship_sensor_range_add = 3
-		ship_evasion_mult = 0.40
+		ship_evasion_mult = 0.4
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -816,7 +893,7 @@ leader_trait_whisperers_chosen = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_anomaly_generation_chance_mult = 0.50
+		ship_anomaly_generation_chance_mult = 0.5
 		ship_archaeological_site_clues_add = 3
 	}
 	triggered_modifier = {
@@ -833,7 +910,7 @@ leader_trait_whisperers_chosen = {
 			is_ruler = no
 			leader_class = official
 		}
-		resolutions_cost_mult = -0.10
+		resolutions_cost_mult = -0.1
 		resolution_category_galacticstudies_vote_strength_mult = 0.25
 	}
 	# Official - Federation Modifier
@@ -850,9 +927,9 @@ leader_trait_whisperers_chosen = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
@@ -863,7 +940,11 @@ leader_trait_whisperers_chosen = {
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	opposites = {
 		leader_trait_synthetic
 	}
@@ -885,9 +966,11 @@ leader_trait_mercenary_warrior = {
 		ship_fire_rate_mult = 0.1
 	}
 	army_modifier = {
-		army_damage_mult = 0.10
+		army_damage_mult = 0.1
 	}
-	leader_class = { commander }
+	leader_class = {
+		commander
+	}
 	initial = no
 	randomized = no
 }
@@ -904,7 +987,11 @@ leader_trait_ruler_hive_mind = {
 		TIER = none
 	}
 	custom_tooltip_with_modifiers = leader_trait_ignore_leader_cap_tt
-	leader_class = { scientist official commander }
+	leader_class = {
+		scientist
+		official
+		commander
+	}
 	hide_age = yes
 	initial = no
 	randomized = no
@@ -924,7 +1011,11 @@ leader_trait_ruler_great_khan = {
 		army_morale = 0.25
 		ship_weapon_damage = 0.05
 	}
-	leader_class = { scientist official commander }
+	leader_class = {
+		scientist
+		official
+		commander
+	}
 	initial = no
 	randomized = no
 }
@@ -941,7 +1032,11 @@ leader_trait_ruler_machine_intelligence = {
 		TIER = none
 	}
 	custom_tooltip_with_modifiers = leader_trait_ignore_leader_cap_tt
-	leader_class = { scientist official commander }
+	leader_class = {
+		scientist
+		official
+		commander
+	}
 	initial = no
 	randomized = no
 	hide_age = yes
@@ -999,9 +1094,9 @@ leader_trait_ancient_knowledge = {
 		potential = {
 			leader_class = scientist
 		}
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -1011,7 +1106,11 @@ leader_trait_ancient_knowledge = {
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
 	}
-	leader_class = { commander official scientist }
+	leader_class = {
+		commander
+		official
+		scientist
+	}
 	initial = no
 	randomized = no
 }
@@ -1026,11 +1125,15 @@ leader_trait_hacked = {
 		TIER = none
 	}
 	self_modifier = {
-		leaders_upkeep_mult = 0.20
-		species_leader_exp_gain = -0.20
+		leaders_upkeep_mult = 0.2
+		species_leader_exp_gain = -0.2
 		negative_traits_leader = 2
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 }
 
 leader_trait_firewalled = {
@@ -1053,10 +1156,14 @@ leader_trait_firewalled = {
 		AMOUNT = 2
 	}
 	self_modifier = {
-		species_leader_exp_gain = -0.10
+		species_leader_exp_gain = -0.1
 		negative_traits_leader = -1
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 }
 
 leader_trait_virtual = {
@@ -1083,8 +1190,8 @@ leader_trait_virtual = {
 			is_ruler = no
 			leader_class = commander
 		}
-		ship_fire_rate_mult = 0.10
-		ship_disengage_chance_mult = 0.10
+		ship_fire_rate_mult = 0.1
+		ship_disengage_chance_mult = 0.1
 	}
 	# Commander - Army Modifier
 	triggered_army_modifier = {
@@ -1092,8 +1199,8 @@ leader_trait_virtual = {
 			is_ruler = no
 			leader_class = commander
 		}
-		army_damage_taken_mult = -0.10
-		army_disengage_chance_mult = 0.10
+		army_damage_taken_mult = -0.1
+		army_disengage_chance_mult = 0.1
 	}
 	# Scientist - Science Ship Modifier
 	triggered_modifier = {
@@ -1101,8 +1208,8 @@ leader_trait_virtual = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_anomaly_research_speed_mult = 0.10
-		ship_archaeological_site_excavation_speed_mult = 0.10
+		ship_anomaly_research_speed_mult = 0.1
+		ship_archaeological_site_excavation_speed_mult = 0.1
 	}
 	triggered_modifier = {
 		potential = {
@@ -1110,7 +1217,7 @@ leader_trait_virtual = {
 			is_ruler = no
 			leader_class = scientist
 		}
-		ship_astral_rift_speed_mult = 0.10
+		ship_astral_rift_speed_mult = 0.1
 	}
 	# Official - GalCom Modifier
 	triggered_galcom_modifier = {
@@ -1133,9 +1240,9 @@ leader_trait_virtual = {
 		potential = {
 			is_ruler = no
 		}
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
@@ -1146,7 +1253,11 @@ leader_trait_virtual = {
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
 	}
-	leader_class = { commander scientist official }
+	leader_class = {
+		commander
+		scientist
+		official
+	}
 	initial = no
 	randomized = no
 	notify_on_gained = no

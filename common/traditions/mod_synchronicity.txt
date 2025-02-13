@@ -1,0 +1,23 @@
+tr_synchronicity_finish = {
+	modifier = {
+		planetary_ascension_cost_mult = -0.15
+		ascension_perks_add = 1
+	}
+	tradition_swap = {
+		name = tr_synchronicity_machine_finish
+		custom_tooltip = tr_synchronicity_machine_finish_desc
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			#also gain access to an edict
+		planetary_ascension_cost_mult = -0.15
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}

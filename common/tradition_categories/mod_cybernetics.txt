@@ -14,7 +14,6 @@ tradition_cybernetics = {
 			is_individual_machine = yes
 		}
 	}
-
 	traditions = {
 		"tr_cybernetics_transubstantiation_synthesis"
 		"tr_cybernetics_metabolic_reprocessing"
@@ -22,7 +21,6 @@ tradition_cybernetics = {
 		"tr_cybernetics_augmentation_overload"
 		"tr_cybernetics_modular_cybernetics"
 	}
-
 	ai_weight = {
 		factor = 1000
 	}

@@ -1,0 +1,272 @@
+civic_machine_upkeep_twister = {
+	playable = {
+		host_has_dlc = "Galactic Paragons"
+	}
+	ai_playable = {
+		host_has_dlc = "Galactic Paragons"
+	}
+	random_weight = {
+		base = 4
+	}
+	description = "civic_tooltip_machine_upkeep_twister_effects"
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	possible = {
+	}
+	modifier = {
+		leader_initial_skill = 1
+		leader_trait_selection_options_add = 1
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_introspective = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = exterminators
+			}
+		}
+	}
+	modifier = {
+		species_leader_exp_gain = 0.1
+		leader_trait_selection_options_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_predictive_analysis = {
+	description = "civic_tooltip_machine_predictive_analysis_effects"
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		all_technology_research_speed = 0.1
+		num_tech_alternatives_add = 1
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_unitary_cohesion = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		country_unity_produces_mult = 0.15
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		negative_traits_country = -1
+	}
+}
+
+civic_machine_ota_updates = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	description = civic_machine_ota_updates_effect
+	modifier = {
+		empire_size_penalty_mult = -0.25
+		planet_resettlement_unemployed_mult = 0.5
+		country_edict_fund_mult = 0.5
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_delegated_functions = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				has_ai_personality = exterminators
+			}
+		}
+	}
+	modifier = {
+		country_leader_pool_size = 1
+		envoys_add = 1
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+		country_official_cap_add = 1
+		country_commander_cap_add = 1
+		country_scientist_cap_add = 1
+	}
+}
+
+civic_machine_diplomatic_protocols = {
+	playable = { has_machine_age_dlc = yes }
+	ai_playable = { has_machine_age_dlc = yes }
+	random_weight = {
+		base = 4
+	}
+
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	possible = {
+		civics = {
+			NOT = { value = civic_machine_terminator }
+		}
+	}
+
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	ai_weight = {
+		base = @civic_rare_random_weight
+	}
+
+	modifier = {
+		envoys_add = 2
+		diplo_weight_mult = 0.25
+		country_trust_cap_add = 50
+		envoy_improve_relations_mult = 0.25
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_spybots = {
+	playable = {
+		has_nemesis = yes
+	}
+	ai_playable = {
+		has_nemesis = yes
+	}
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	modifier = {
+		envoys_add = 1
+		spy_network_daily_value_mult = 0.25
+		intel_decryption_add = 1
+		add_base_country_intel = 10
+		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
+	}
+	swap_type = {
+		trigger = {
+			has_first_contact_dlc = yes
+		}
+		description = civic_machine_spybots_effects
+		modifier = {
+			ship_cloaking_strength_add = 2
+		}
+	}
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
+	}
+}
+
+civic_machine_factory_overclock = {
+	icon = "gfx/interface/icons/governments/civics/civic_machine_factory_overclock.dds"
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		planet_jobs_complex_and_simple_drone_produces_mult = 0.1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_zero_waste_protocols = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.1
+		planet_structures_upkeep_mult = -0.1
+		ships_upkeep_mult = -0.1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}
+
+civic_machine_builder = {
+	potential = {
+		authority = {
+			value = auth_machine_intelligence
+		}
+	}
+	random_weight = {
+		base = @civic_default_random_weight
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		planet_structures_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+		planet_max_buildings_add = 1
+		councilor_gestalt_growth_exp_gain = @gestalt_civic_node_xp_rate
+	}
+}

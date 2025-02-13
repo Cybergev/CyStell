@@ -1,0 +1,51 @@
+orbital_ring_habitation = {
+	icon = "GFX_orbitalring_module_habitation"
+	section = "HABITAT_ORBITAL_RING_SECTION"
+	construction_days = 720
+	starbase_type = orbital_ring
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_housing_2
+		}
+		is_orbital_ring = yes
+	}
+	show_in_tech = "tech_housing_2"
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 400
+			influence = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	planet_modifier = {
+		planet_max_districts_add = 2
+		planet_max_buildings_add = 1
+	}
+	replaceable = {
+		custom_tooltip = {
+			fail_text = orbital_ring_habitation_districts_maxed_out
+			OR = {
+				# to keep tooltip from showing up when no module is built yet
+				NOT = {
+					has_starbase_module = orbital_ring_habitation
+				}
+				AND = {
+					has_starbase_module = orbital_ring_habitation
+					planet = {
+						num_free_districts = {
+							type = any
+							value >= 1
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
