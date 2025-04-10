@@ -66,7 +66,7 @@ dispose_remains_planet_dec = {
 }
 
 # Repair Shattered Ring
-construkt_orbital_ring_project = {
+construct_orbital_ring_project = {
 	owned_planets_only = yes
 	icon = decision_arcology_project
 	enactment_time = 720
@@ -120,7 +120,7 @@ construkt_orbital_ring_project = {
 			fail_text = "requires_no_existing_megastructure"
 			#can_build_megastructure_on_planet = yes
 			NOR = {
-				has_planet_flag = has_megastructure
+				has_planet_flag = has_orbital_ring
 				has_planet_flag = ruined_orbital_ring_planet
 				solar_system = {
 					has_star_flag = ring_world_built
@@ -157,7 +157,7 @@ construkt_orbital_ring_project = {
 	}
 	effect = {
 		save_event_target_as = orbital_ring_planet
-		set_planet_flag = has_megastructure
+		set_planet_flag = has_orbital_ring
 		if = {
 			limit = {
 				has_orbital_station = yes
