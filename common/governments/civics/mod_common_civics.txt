@@ -30,7 +30,9 @@ civic_technocracy = {
 		}
 	}
 	modifier = {
-		planet_researchers_unity_produces_add = 1
+		planet_physicists_unity_produces_add = 2
+		planet_biologist_unity_produces_add = 2
+		planet_engineer_unity_produces_add = 2
 	}
 	random_weight = {
 		base = @civic_default_random_weight
@@ -74,7 +76,7 @@ civic_dark_consortium = {
 		}
 	}
 	modifier = {
-		planet_researchers_sr_dark_matter_produces_add = 1
+		planet_physicists_sr_dark_matter_produces_add = 1
 	}
 	modification = {
 		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
@@ -116,7 +118,7 @@ civic_corporate_dark_consortium = {
 		}
 	}
 	modifier = {
-		planet_researchers_sr_dark_matter_produces_add = 1
+		planet_physicists_sr_dark_matter_produces_add = 1
 	}
 	modification = {
 		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
@@ -176,7 +178,7 @@ civic_functional_architecture = {
 		}
 	}
 	modifier = {
-		empire_size_districts_mult = -0.2
-		planet_max_buildings_add = 2
+		empire_size_districts_mult = -0.5
+		planet_max_districts_mult = 0.5
 	}
 }

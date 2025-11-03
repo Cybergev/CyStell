@@ -23,7 +23,7 @@ colossus = {
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes	#if yes, ship design will have a 3d view in the ship browser
 	selectable = {
-		host_has_dlc = "Apocalypse"
+		has_apocalypse_dlc = yes
 	}
 	prerequisites = {
 		"tech_colossus"
@@ -91,6 +91,9 @@ colossus = {
 			energy = @colossus_upkeep_energy
 			alloys = @colossus_upkeep_alloys
 		}
+		logistics = {
+			trade = @colossus_logistic_upkeep_trade
+		}
 	}
 	min_upgrade_cost = {
 		alloys = 10
@@ -99,4 +102,5 @@ colossus = {
 		min = 1
 		max = 1
 	}
+	available_to_everyone = yes
 }

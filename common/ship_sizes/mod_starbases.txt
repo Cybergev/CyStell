@@ -19,9 +19,64 @@ starbase_outpost = {
 	max_hitpoints = 5000
 	base_buildtime = 360
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 100
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 100
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = 150
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 150
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 150
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 1
@@ -56,6 +111,7 @@ starbase_outpost = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	default_behavior = artillery
 	ship_roles = {
@@ -69,7 +125,6 @@ starbase_outpost = {
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
-	required_component_set = "ftl_inhibitor"
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 1
@@ -86,10 +141,6 @@ starbase_starport = {
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 2
 		starbase_defense_platform_capacity_add = 5
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 8
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -99,9 +150,32 @@ starbase_starport = {
 	max_hitpoints = 10000
 	base_buildtime = 360
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 200
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 200
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 200
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 2
@@ -129,6 +203,7 @@ starbase_starport = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	default_behavior = artillery
 	ship_roles = {
@@ -165,10 +240,6 @@ starbase_starhold = {
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 10
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 16
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -178,9 +249,32 @@ starbase_starhold = {
 	max_hitpoints = 20000
 	base_buildtime = 720
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 500
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 500
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 3
@@ -214,6 +308,7 @@ starbase_starhold = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	default_behavior = artillery
 	ship_roles = {
@@ -250,10 +345,6 @@ starbase_starfortress = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 6
 		starbase_defense_platform_capacity_add = 15
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 24
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -263,9 +354,32 @@ starbase_starfortress = {
 	max_hitpoints = 40000
 	base_buildtime = 1080
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 1250
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 1250
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1250
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 4
@@ -305,6 +419,7 @@ starbase_starfortress = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	default_behavior = artillery
 	ship_roles = {
@@ -341,10 +456,6 @@ starbase_citadel = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 6
 		starbase_defense_platform_capacity_add = 20
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 32
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -354,9 +465,32 @@ starbase_citadel = {
 	max_hitpoints = 80000
 	base_buildtime = 1440
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			alloys = 3500
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = 3500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 3500
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 5
@@ -396,13 +530,9 @@ starbase_citadel = {
 	components_add_to_cost = no
 	can_disable = yes
 	flip_control_on_disable = yes
+	available_to_everyone = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes	#if yes, ship design will have a 3d view in the ship browser
-	default_behavior = artillery
-	ship_roles = {
-		artillery
-		gunship
-	}
 	prerequisites = {
 		"tech_starbase_5"
 	}

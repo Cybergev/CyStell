@@ -1,0 +1,206 @@
+trait_lithoid = {
+	cost = 0
+	sorting_priority = 20
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	immortal_leaders = no
+	leader_age_min = 20
+	leader_age_max = 30
+	allowed_archetypes = {
+		LITHOID
+	}
+	tags = {
+		organic
+		positive
+		habitability
+		leader
+		army
+		lithoid
+		special
+	}
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/traits/trait_lithoid.dds"
+	custom_tooltip_with_modifiers = TRAIT_LITHOID_EFFECT
+	modifier = {
+		logistic_growth_mult = -0.2
+		bonus_pop_growth_mult = -0.2
+		pop_environment_tolerance = 0.4
+		army_health = 0.4
+		leader_lifespan_add = 40
+	}
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				OR = {
+					has_modifier = lithoid_crater
+					has_deposit = d_lithoid_crater
+				}
+			}
+		}
+		pop_environment_tolerance = 0.5
+	}
+}
+
+trait_cave_dweller = {
+	cost = 0
+	opposites = {
+		"trait_plantoid_phototrophic"
+	}
+	sorting_priority = 20
+	initial = no
+	randomized = no
+	immortal_leaders = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
+	tags = {
+		organic
+		positive
+		habitability
+		mineral
+		production
+		interesting
+		special
+	}
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/traits/trait_cave_dweller.dds"
+	modifier = {
+		pop_environment_tolerance = 0.2
+		miner_jobs_bonus_workforce_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+				has_mining_designation = yes
+			}
+		}
+		modifier = {
+			add = 0.5
+			from = {
+				has_rural_designation = yes
+			}
+		}
+	}
+}
+
+trait_robot_cave_dweller = {
+	cost = 0
+	sorting_priority = 20
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	allowed_archetypes = {
+		MACHINE
+		ROBOT
+	}
+	tags = {
+		machine
+		positive
+		habitability
+		mineral
+		production
+		special
+	}
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/traits/trait_robot_cave_dweller.dds"
+	modifier = {
+		pop_environment_tolerance = 0.2
+		planet_jobs_minerals_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+				has_mining_designation = yes
+			}
+		}
+		modifier = {
+			add = 0.5
+			from = {
+				has_rural_designation = yes
+			}
+		}
+	}
+}
+
+trait_perfected_genes = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = {
+		trait_nonadaptive
+		trait_fleeting
+	}
+	sorting_priority = 20
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
+	tags = {
+		organic
+		positive
+		leader
+		drawbacks
+		special
+	}
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	modifier = {
+		pop_environment_tolerance = 0.1
+		army_health = 0.2
+		leader_lifespan_add = 20
+	}
+}

@@ -4,6 +4,8 @@ NSpecies = {
 
 NShip = {
 	JUMP_DRIVE_RANGE = 200
+	EXCESS_POWER_BONUS_THRESHOLD_MAX = 1	# 0.5 means 0-50% excess power linearly scales ship_excess_power modifier between 0-1.
+	EXCESS_POWER_BONUS_THRESHOLD_MIN = 0.1	# min value for excess power to be used.
 }
 
 NGameplay = {
@@ -17,4 +19,5 @@ NGameplay = {
 	RELIC_VIEW_SLOTS_PER_ROW = 5
 	RELIC_VIEW_SLOTS_PER_ROW_WIDE = 4
 	RELIC_VIEW_DEFAULT_ROW_COUNT = 2
+	COMMAND_LIMIT_BASE = 20
 }

@@ -17,6 +17,26 @@ matter_decompressor_0 = {
 			alloys = 5000
 			unity = 5000
 		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 5000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 5000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 5000
+			mult = @halved_alloy_to_food_cost_ratio
+		}
 		upkeep = {
 			energy = 5
 		}
@@ -28,7 +48,9 @@ matter_decompressor_0 = {
 		has_gw_matter_decompressor = yes
 	}
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -40,6 +62,12 @@ matter_decompressor_0 = {
 	}
 	placement_rules = {
 		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				NOT = {
+					has_planet_flag = md_placed
+				}
+			}
 			custom_tooltip = {
 				fail_text = "must_build_around_star"
 				is_star = yes
@@ -78,6 +106,9 @@ matter_decompressor_0 = {
 		}
 	}
 	on_build_start = {
+		fromfrom.planet = {
+			set_planet_flag = md_placed
+		}
 	}
 	on_build_cancel = {
 	}

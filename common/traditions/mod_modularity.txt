@@ -4,9 +4,7 @@ tr_modularity_adopt = {
 			limit = {
 				has_country_flag = synthetic_empire
 			}
-			NOT = {
-				has_country_flag = synth_virtual
-			}
+			has_country_flag = synth_physical
 		}
 		else = {
 			custom_tooltip = {
@@ -46,7 +44,7 @@ tr_modularity_1 = {
 	modifier = {
 		MACHINE_species_trait_points_add = 2
 		MACHINE_species_trait_picks_add = 2
-		auto_mod_monthly_add = 10
+		auto_mod_monthly_add = 1000
 	}
 	ai_weight = {
 		factor = 1000
@@ -149,6 +147,9 @@ tr_modularity_finish = {
 		hidden_effect = {
 			country_event = {
 				id = cybernetics.5080
+			}
+			country_event = {
+				id = timeline.82
 			}
 			if = {
 				limit = {

@@ -1,25 +1,53 @@
-star_eater_ships_limit = {
+titan_ships_limit = {
 	ship_types = {
-		star_eater
+		titan
+		cosmo_crisis_titan
+		bio_titan
 	}
-	base = 40	# 1 * star_eater's size_multiplier
+	base = 16	# 1 * titan's size_multiplier
+	max = 640	# 40 * 16
+	naval_cap_fraction = 0.1
+	show = {
+		is_scope_valid = yes
+		has_technology = tech_titans
+	}
+}
+
+juggernaut_ships_limit = {
+	ship_types = {
+		juggernaut
+	}
+	base = 32	# 1 * juggernaut's size_multiplier
+	max = 320	# 10 * 32
+	naval_cap_fraction = 0.05
+	show = {
+		is_scope_valid = yes
+		has_technology = tech_juggernaut
+	}
+}
+
+colossus_ships_limit = {
+	ship_types = {
+		colossus
+	}
+	base = 32	# 1 * colossus's size_multiplier
+	max = 320	# 10 * 32
+	naval_cap_fraction = 0.01
 	show = {
 		is_scope_valid = yes
 		has_technology = tech_colossus
 	}
 }
 
-titan_ships_limit = {
+star_eater_ships_limit = {
 	ship_types = {
-		titan
-		cosmo_crisis_titan
-		graygoo_mothership
+		star_eater
 	}
-	base = 16	# 1 * titan's size_multiplier
-	max = 320	# 20 * 16
-	naval_cap_fraction = 0.08
+	base = 40	# 1 * star_eater's size_multiplier
+	max = 200	# 5 * 40
+	naval_cap_fraction = 0.01
 	show = {
 		is_scope_valid = yes
-		has_technology = tech_titans
+		has_technology = tech_btc_1
 	}
 }

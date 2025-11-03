@@ -12,6 +12,11 @@ tr_synthetics_finish = {
 					days = 180
 				}
 			}
+			else = {
+				country_event = {
+					id = timeline.79
+				}
+			}
 		}
 	}
 	modifier = {
@@ -20,6 +25,7 @@ tr_synthetics_finish = {
 		modify_species_cost_mult = -0.5
 		ascension_perks_add = 1
 	}
+	custom_tooltip = AUTH_MACHINE_ASCENSION_RESTRICTIONS
 	tradition_swap = {
 		name = tr_synthetics_finish_machine
 		inherit_name = no

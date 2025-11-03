@@ -1,0 +1,110 @@
+###################################################
+#                                                 #
+# Machine Age DLC Transformation Situation Events #
+#                                                 #
+###################################################
+namespace = machine_age
+# Fired by: situation on_progress_complete
+situation_event = {
+	# Final Event
+	id = machine_age.4005
+	title = "machine_age.4005.name"
+	desc = {
+		trigger = {
+			owner = {
+				has_country_flag = transformation_nanotech
+			}
+		}
+		text = "machine_age.4005.desc.nanotech"
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_country_flag = transformation_modularity
+			}
+		}
+		text = "machine_age.4005.desc.modularity"
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_country_flag = transformation_virtuality
+			}
+		}
+		text = "machine_age.4005.desc.virtuality"
+	}
+	picture = GFX_evt_machine_sapience
+	show_sound = event_laboratory_sound
+	situation = this
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = transformation_nanotech
+				}
+			}
+			owner = {
+				set_variable = {
+					which = nanotech_worlds_created
+					value = 0
+				}
+			}
+		}
+		set_country_flag = synthetic_empire
+	}
+	option = {
+		name = "machine_age.4005.a.nanotech"
+		trigger = {
+			owner = {
+				has_country_flag = transformation_nanotech
+			}
+		}
+		owner = {
+			set_country_flag = nanotech_traditions_unlocked
+			add_resource = {
+				unity = 10000
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "machine_age.4005.a.modularity"
+		trigger = {
+			owner = {
+				has_country_flag = transformation_modularity
+			}
+		}
+		owner = {
+			set_country_flag = modularity_traditions_unlocked
+			add_resource = {
+				unity = 10000
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = "machine_age.4005.a.virtuality"
+		trigger = {
+			owner = {
+				has_country_flag = transformation_virtuality
+			}
+		}
+		owner = {
+			set_country_flag = virtuality_traditions_unlocked
+			add_resource = {
+				unity = 10000
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		destroy_situation = this
+	}
+}

@@ -59,10 +59,10 @@ origin_subterranean = {
 	}
 	modifier = {
 		planet_orbital_bombardment_damage = -0.5
-		planet_structures_cost_mult = 0.1
-		planet_building_build_speed_mult = -0.1
-		mining_district_housing_add = 3
-		mining_district_buildings_add = 0.5
+		planet_storm_devastation_mult = -0.5
+		planet_structures_cost_mult = 0.25
+		planet_building_build_speed_mult = -0.25
+		mining_district_housing_add = 200
 	}
 	random_weight = {
 		base = 5
@@ -96,10 +96,10 @@ origin_subterranean_machines = {
 	}
 	modifier = {
 		planet_orbital_bombardment_damage = -0.5
-		planet_structures_cost_mult = 0.1
-		planet_building_build_speed_mult = -0.1
-		mining_district_housing_add = 3
-		mining_district_buildings_add = 0.5
+		planet_storm_devastation_mult = -0.5
+		planet_structures_cost_mult = 0.25
+		planet_building_build_speed_mult = -0.25
+		mining_district_housing_add = 200
 	}
 	random_weight = {
 		base = 5

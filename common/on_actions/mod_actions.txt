@@ -1,12 +1,6 @@
 # This = Country
 # From = Species ( Post Modification )
 on_modification_complete = {
-	events = {
-		tutorial.65
-		utopia.2508		# Handle leader traits after species modification
-		utopia.6001		# Hive Mind species integration
-		astral_planes.5120		# Eternal Throne passive immortality
-	}
 	if = {
 		limit = {
 			is_gestalt = yes
