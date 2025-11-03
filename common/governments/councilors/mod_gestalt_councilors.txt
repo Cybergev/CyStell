@@ -8,7 +8,7 @@ councilor_ruler_hive_mind = {
 		always = no
 	}
 	modifier = {
-		planet_pop_assembly_organic_add = 0.5
+		bonus_pop_growth = 0.5
 		country_unity_produces_mult = 0.05
 		country_war_exhaustion_mult = -0.05
 		country_influence_produces_mult = 0.05
@@ -50,7 +50,9 @@ councilor_ruler_machine_intelligence = {
 }
 
 councilor_gestalt_growth = {
-	leader_class = { official }
+	leader_class = {
+		official
+	}
 	possible = {
 		is_gestalt = yes
 	}
@@ -58,19 +60,23 @@ councilor_gestalt_growth = {
 		leader_class = official
 	}
 	modifier = {
-		pop_growth_speed = 0.02
-		planet_pop_assembly_organic_mult = 0.02
+		logistic_growth_mult = 0.02
+		bonus_pop_growth_mult = 0.02
 		planet_pop_assembly_mult = 0.02
 	}
 	icon = "GFX_icon_councilor_ruler"
-	optional = { always = no }
+	optional = {
+		always = no
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
 }
 
 councilor_gestalt_cognitive = {
-	leader_class = { scientist }
+	leader_class = {
+		scientist
+	}
 	possible = {
 		is_gestalt = yes
 	}
@@ -81,7 +87,9 @@ councilor_gestalt_cognitive = {
 		all_technology_research_speed = 0.02
 	}
 	icon = "GFX_icon_councilor_research"
-	optional = { always = no }
+	optional = {
+		always = no
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
@@ -91,7 +99,9 @@ councilor_gestalt_legion = {
 	possible = {
 		is_gestalt = yes
 	}
-	leader_class = { commander }
+	leader_class = {
+		commander
+	}
 	is_leader_possible = {
 		leader_class = commander
 	}
@@ -99,14 +109,18 @@ councilor_gestalt_legion = {
 		country_base_influence_produces_add = 0.2
 	}
 	icon = "GFX_icon_councilor_defense"
-	optional = { always = no }
+	optional = {
+		always = no
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
 }
 
 councilor_gestalt_regulatory = {
-	leader_class = { official }
+	leader_class = {
+		official
+	}
 	possible = {
 		is_gestalt = yes
 	}
@@ -117,7 +131,9 @@ councilor_gestalt_regulatory = {
 		planet_crime_no_happiness_add = -2
 	}
 	icon = "GFX_icon_councilor_ruler"
-	optional = { always = no }
+	optional = {
+		always = no
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}

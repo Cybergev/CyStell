@@ -5,6 +5,7 @@ can_orbitable_repair_ships = {
 			is_scope_type = starbase
 			OR = {
 				has_starbase_size >= starbase_outpost
+				has_starbase_size >= starbase_deep_space_citadel_1
 				has_starbase_size = juggernaut
 				has_starbase_size = enclave_mercenary_station
 			}

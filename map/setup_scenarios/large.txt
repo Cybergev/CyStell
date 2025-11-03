@@ -8,10 +8,10 @@ setup_scenario = {
 		max = 25
 	}	#limits player customization
 	num_empire_default = 25
-	fallen_empire_default = 5
-	fallen_empire_max = 5
-	marauder_empire_default = 8
-	marauder_empire_max = 8
+	fallen_empire_default = 6
+	fallen_empire_max = 6
+	marauder_empire_default = 10
+	marauder_empire_max = 10
 	advanced_empire_default = 4
 	colonizable_planet_odds = 1
 	primitive_odds = 1
@@ -44,8 +44,8 @@ setup_scenario = {
 		method = depth_first
 	}
 	num_nebulas = 8
-	nebula_size = 80
-	nebula_min_dist = 80
+	nebula_size = 50
+	nebula_min_dist = 100
 	num_wormhole_pairs = {
 		min = 0
 		max = 5
@@ -58,7 +58,7 @@ setup_scenario = {
 	num_gateways_default = 1
 	num_hyperlanes = {
 		min = 0.5
-		max = 5
+		max = 6
 	}
 	num_hyperlanes_default = 1
 	supports_shape = elliptical

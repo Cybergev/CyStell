@@ -1,0 +1,49 @@
+###########################
+# Utopia On-Action Events #
+###########################
+@covenant_rank_1 = 20
+@covenant_rank_2 = 50
+@covenant_rank_3 = 90
+@covenant_rank_4 = 150
+namespace = utopia
+# Handle leader traits and species after species modification
+# This = Country
+# From = Species ( Post Modification )
+# FromFrom = Species ( Original )
+# Prev = Planet
+country_event = {
+	id = utopia.2508
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_owned_leader = {
+			update_leader_after_modification = yes
+		}
+		every_pool_leader = {
+			update_leader_after_modification = yes
+		}
+	}
+}
+
+# New Leaders Get Erudite Trait
+country_event = {
+	id = utopia.2509
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			NOT = { leader_class = envoy }
+			species = {
+				has_trait = trait_erudite
+			}
+		}
+	}
+	immediate = {
+		from = {
+			add_trait = {
+				trait = leader_trait_erudite
+				show_message = no
+			}
+		}
+	}
+}

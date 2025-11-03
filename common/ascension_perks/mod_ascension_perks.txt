@@ -42,64 +42,244 @@ ap_imperial_prerogative = {
 	}
 }
 
-ap_galactic_force_projection = {
+ap_transcendent_learning = {
+	modifier = {
+		species_leader_exp_gain = 0.25
+		leaders_upkeep_mult = -0.25
+		leaders_cost_mult = -0.25
+		leader_trait_selection_options_add = 1
+		country_leader_pool_size = 1
+	}
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_transcendent_learning
+		}
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+ap_master_builders = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_2"
 			num_ascension_perks > 1
 		}
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
 	}
 	modifier = {
-		country_power_projection_influence_produces_add = 2
-		country_commander_cap_add = 1
-		country_naval_cap_add = 100
-		command_limit_add = 100
+		megastructures_cost_mult = -0.25
+		megastructure_build_speed_mult = 0.5
+		country_megastructure_build_cap_add = 2
+		arc_furnace_limit_add = 5
+		dyson_swarm_limit_add = 5
+		deep_space_citadel_limit_add = 2
 	}
 	potential = {
+		host_has_dlc = "Utopia"
 		NOT = {
-			has_ascension_perk = ap_galactic_force_projection
+			has_ascension_perk = ap_master_builders
 		}
 	}
 	ai_weight = {
 		factor = 10
 		modifier = {
-			factor = 1.5
-			num_owned_planets < 10
-		}
-		modifier = {
-			factor = 1.5
-			num_owned_planets < 20
+			factor = 0.5
+			has_galactic_wonders = no
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_militarist
+			has_ethic = ethic_pacifist
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
 			factor = 2
-			has_ascension_perk = ap_become_the_crisis
+			has_galactic_wonders = yes
 		}
-		modifier = {
-			factor = 5
-			used_naval_capacity_percent > 1.3
-		}
-		modifier = {
-			factor = 4
-			used_naval_capacity_percent > 0.9
-		}
-		modifier = {
-			factor = 0.01
-			used_naval_capacity_percent < 0.5
-		}
-		modifier = {
-			factor = 0.01
-			has_monthly_income = {
-				resource = alloys
-				value < 0
+	}
+}
+
+ap_galactic_wonders_utopia = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_ring_world
+					}
+					can_research_technology = tech_ring_world
+				}
+				add_research_option = tech_ring_world
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_dyson_sphere
+					}
+				}
+				add_research_option = tech_dyson_sphere
+			}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+	}
+	potential = {
+		host_has_dlc = "Utopia"
+		NOR = {
+			host_has_dlc = "Megacorp"
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+	}
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_galactic_wonders_megacorp = {
+	on_enabled = {
+		if = {
+			limit = {
+				NOT = {
+					has_technology = tech_matter_decompressor
+				}
+			}
+			add_research_option = tech_matter_decompressor
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+	}
+	potential = {
+		host_has_dlc = "Megacorp"
+		NOR = {
+			host_has_dlc = "Utopia"
+			has_ascension_perk = ap_galactic_wonders_megacorp
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}
+
+ap_galactic_wonders_utopia_and_megacorp = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia_megacorp"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_ring_world
+					}
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_dyson_sphere
+					}
+				}
+				add_research_option = tech_dyson_sphere
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_technology = tech_matter_decompressor
+					}
+				}
+				add_research_option = tech_matter_decompressor
+			}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+	}
+	potential = {
+		host_has_dlc = "Utopia"
+		host_has_dlc = "Megacorp"
+		NOT = {
+			has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+		}
+	}
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
 		}
 	}
 }

@@ -1,0 +1,3 @@
+@dyson_swarm_1_mod_value = 25
+@dyson_swarm_2_mod_value = 50
+@dyson_swarm_3_mod_value = 100

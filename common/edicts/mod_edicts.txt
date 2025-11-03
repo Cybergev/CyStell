@@ -1,5 +1,8 @@
+@ambitionDuration = -1
+@ambitionCost = 75
+@ambitionUpkeep = 75
 form_galcom = {
-	length = -1
+	length = @ambitionDuration
 	icon = "GFX_edict_type_policy"
 	resources = {
 		category = edicts
@@ -34,5 +37,65 @@ form_galcom = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+}
+
+architectural_renaissance = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			unity = @ambitionCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @ambitionUpkeep
+			multiplier = value:edict_size_effect
+		}
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.5
+		country_megastructure_build_cap_add = 1
+		planet_building_build_speed_mult = 1
+		planet_building_capacity_add = 1
+	}
+	potential = {
+		has_technology = tech_ascension_theory
+	}
+	allow = {
+		has_technology = tech_mega_engineering
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+fix_edict = {
+	length = @ambitionDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+	}
+	effect = {
+	}
+	potential = {
+		NOT = {
+			has_edict = fix_edict
+		}
+	}
+	allow = {
+		NOT = {
+			has_edict = fix_edict
+		}
+	}
+	ai_weight = {
+		weight = 1
 	}
 }

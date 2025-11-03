@@ -1,0 +1,154 @@
+## Nanite Swarmer
+ship_section_template = {
+	key = "nanite_swarmer_flak_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		screen
+		screen_stealth
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "invisible_point_defence_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "invisible_point_defence_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "invisible_point_defence_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "invisible_point_defence_turret"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "nanite_swarmer_small_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		brawler
+		brawler_stealth
+	}
+	component_slot = {
+		name = "SMAL_01"
+		template = "invisible_small_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_02"
+		template = "invisible_small_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_03"
+		template = "invisible_small_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "SMALL_04"
+		template = "invisible_small_turret"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "nanite_swarmer_medium_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		gunship
+		gunship_stealth
+	}
+	component_slot = {
+		name = "MEDIUM_01"
+		template = "invisible_medium_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "MEDIUM_02"
+		template = "invisible_medium_turret"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "nanite_swarmer_large_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		artillery
+		artillery_stealth
+	}
+	component_slot = {
+		name = "LARGE_01"
+		template = "invisible_large_turret"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "nanite_swarmer_torpedo_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		explosive
+		explosive_stealth
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "invisible_missile_turret"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "invisible_missile_turret"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "nanite_swarmer_carrier_key"
+	ship_size = nanite_swarmer
+	fits_on_slot = mid
+	entity = "gatebuilder_01_cruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	ai_tags = {
+		carrier
+		carrier_stealth
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "turret_01"
+	}
+	small_utility_slots = 1
+	aux_utility_slots = 1
+}

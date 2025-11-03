@@ -63,9 +63,9 @@ councilor_functional_architecture = {
 	}
 	civic = civic_functional_architecture
 	modifier = {
-		planet_structures_cost_mult = -0.02
-		planet_structures_upkeep_mult = -0.02
-		planet_building_build_speed_mult = 0.02
+		planet_structures_cost_mult = -0.025
+		planet_structures_upkeep_mult = -0.025
+		planet_building_build_speed_mult = 0.025
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

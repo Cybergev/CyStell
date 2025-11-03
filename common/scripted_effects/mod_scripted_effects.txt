@@ -1,67 +1,60 @@
-add_leader_traits_after_modification = {
+update_leader_after_modification = {
 	if = {
 		limit = {
-			species = {
-				has_trait = trait_erudite
-			}
+			is_leader_tier = leader_tier_default
+			has_any_chosen_one_leader_trait = no
 		}
-		if = {
-			limit = {
-				NOR = {
-					has_trait = leader_trait_erudite
-					has_leader_flag = renowned_leader
-					has_leader_flag = legendary_leader
-				}
-			}
-			add_trait_no_notify = leader_trait_erudite
-		}
-	}
-	if = {
-		limit = {
-			species = {
-				has_trait = trait_psionic
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_trait = leader_trait_psionic
-				}
-			}
-			add_trait_no_notify = leader_trait_psionic
-		}
-	}
-}
-
-remove_leader_traits_after_modification = {
-	if = {
-		limit = {
-			species = {
-				NOT = {
+		# Remove all applicable leader traits
+		remove_trait = leader_trait_erudite
+		remove_trait = leader_trait_cyborg
+		remove_trait = leader_trait_limited_cyborg
+		remove_trait = leader_trait_psionic
+		# Add the correct leader trait based on the species
+		species = {
+			if = {
+				limit = {
 					has_trait = trait_erudite
 				}
-			}
-		}
-		if = {
-			limit = {
-				has_trait = leader_trait_erudite
-			}
-			remove_trait = leader_trait_erudite
-		}
-	}
-	if = {
-		limit = {
-			species = {
-				NOT = {
-					has_trait = trait_psionic
+				prev = {
+					add_trait = {
+						trait = leader_trait_erudite
+						show_message = no
+					}
 				}
 			}
-		}
-		if = {
-			limit = {
-				has_trait = leader_trait_psionic
+			if = {
+				limit = {
+					has_trait = trait_cybernetic
+				}
+				prev = {
+					add_trait = {
+						trait = leader_trait_cyborg
+						show_message = no
+					}
+				}
 			}
-			remove_trait = leader_trait_psionic
+			if = {
+				limit = {
+					has_trait = trait_limited_cybernetic
+				}
+				prev = {
+					add_trait = {
+						trait = leader_trait_limited_cyborg
+						show_message = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_trait = trait_psionic
+				}
+				prev = {
+					add_trait = {
+						trait = leader_trait_psionic
+						show_message = no
+					}
+				}
+			}
 		}
 	}
 }
@@ -91,7 +84,7 @@ create_cybernetic_species_mod = {
 		save_event_target_as = changing_species
 	}
 	owner = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_exact_same_species = event_target:changing_species
 			}
@@ -190,7 +183,7 @@ upgrade_to_psionic_race = {
 		change_all = yes
 	}
 	owner = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_exact_same_species = event_target:changing_species
 			}
@@ -261,7 +254,7 @@ upgrade_mechanical_to_machine = {
 		change_all = yes
 	}
 	owner = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_exact_same_species = event_target:changing_species
 			}
@@ -298,133 +291,6 @@ upgrade_mechanical_to_machine = {
 				is_exact_same_species = event_target:changing_species
 			}
 			change_species = last_created_species
-		}
-	}
-}
-
-# root/this = planet
-assimilation_effect = {
-	random_owned_pop = {
-		limit = {
-			has_citizenship_type = {
-				type = citizenship_assimilation
-				country = root.owner
-			}
-			NOT = {
-				root = {
-					is_planet_class = pc_cosmogenesis_world
-				}
-			}
-		}
-		if = {
-			# Has Synth-Genetic Assimilation
-			limit = {
-				OR = {
-					AND = {
-						root.owner = {
-							has_country_flag = synth_assimilation
-						}
-						OR = {
-							has_trait = trait_mechanical
-							has_trait = trait_machine_unit
-						}
-						OR = {
-							root.owner = {
-								is_machine_empire = yes
-							}
-							root.owner = {
-								is_individual_machine = yes
-							}
-						}
-					}
-					root.owner = {
-						has_tradition = tr_genetics_finish
-					}
-				}
-			}
-			kill_pop = yes
-			root = {
-				create_pop = {
-					species = root.owner
-					ethos = root.owner
-				}
-				owner = {
-					if = {
-						limit = {
-							has_ascension_perk = ap_become_the_crisis
-						}
-						complete_crisis_objective = crisobj_purge_pops
-					}
-				}
-			}
-		}
-		else = {
-			random_galaxy_species = {
-				limit = {
-					has_species_flag = assimilation_species_of_species@prev.species
-					has_species_flag = assimilation_species_of_empire@root.owner
-				}
-				save_event_target_as = convert_to_species
-			}
-			species = {
-				save_event_target_as = old_species
-			}
-			if = {
-				limit = {
-					exists = event_target:convert_to_species					#should always exist
-				}
-				change_species = event_target:convert_to_species
-				owner = {
-					if = {
-						limit = {
-							has_ascension_perk = ap_become_the_crisis
-						}
-						complete_crisis_objective = crisobj_purge_pops
-					}
-				}
-				root = {
-					change_variable = {
-						which = assimilation_counter
-						value = -1
-					}
-					while = {
-						#to avoid doing the random_galaxy_species thing too many times
-						limit = {
-							exists = event_target:old_species
-							check_variable = {
-								which = assimilation_counter
-								value > 0
-							}
-							any_owned_pop = {
-								is_same_value = event_target:old_species
-							}
-						}
-						random_owned_pop = {
-							limit = {
-								is_exact_same_species = event_target:old_species
-							}
-							change_species = event_target:convert_to_species
-							apply_post_assimilation_effects = yes
-						}
-						change_variable = {
-							which = assimilation_counter
-							value = -1
-						}
-						owner = {
-							if = {
-								limit = {
-									has_ascension_perk = ap_become_the_crisis
-								}
-								complete_crisis_objective = crisobj_purge_pops
-							}
-						}
-					}
-				}
-				apply_post_assimilation_effects = yes
-			}
-			else = {
-				log_error = "No species found for \\[This.Species.GetName] pop owned by \\[This.Owner.GetName] on \\[This.Planet.GetName] to assimilate to"
-			}
 		}
 	}
 }

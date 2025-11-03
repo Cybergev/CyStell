@@ -4,9 +4,7 @@ tr_nanotech_adopt = {
 			limit = {
 				has_country_flag = synthetic_empire
 			}
-			NOT = {
-				has_country_flag = synth_virtual
-			}
+			has_country_flag = synth_physical
 		}
 		else = {
 			custom_tooltip = {

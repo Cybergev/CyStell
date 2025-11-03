@@ -1,0 +1,116 @@
+
+@corvette_reactor_power_1 = 50
+@corvette_reactor_power_2 = 100
+@corvette_reactor_power_3 = 150
+@corvette_reactor_power_4 = 200
+@corvette_reactor_power_5 = 250
+@corvette_reactor_power_6 = 300
+
+@destroyer_reactor_power_1 = 200
+@destroyer_reactor_power_2 = 300
+@destroyer_reactor_power_3 = 400
+@destroyer_reactor_power_4 = 500
+@destroyer_reactor_power_5 = 600
+@destroyer_reactor_power_6 = 700
+
+@cruiser_reactor_power_1 = 250
+@cruiser_reactor_power_2 = 500
+@cruiser_reactor_power_3 = 750
+@cruiser_reactor_power_4 = 1000
+@cruiser_reactor_power_5 = 1250
+@cruiser_reactor_power_6 = 1500
+
+@battleship_reactor_power_1 = 750
+@battleship_reactor_power_2 = 1000
+@battleship_reactor_power_3 = 1250
+@battleship_reactor_power_4 = 1500
+@battleship_reactor_power_5 = 1750
+@battleship_reactor_power_6 = 2000
+
+@titan_reactor_power_1 = 1500
+@titan_reactor_power_2 = 2000
+@titan_reactor_power_3 = 2500
+@titan_reactor_power_4 = 3000
+@titan_reactor_power_5 = 3500
+@titan_reactor_power_6 = 4000
+
+# Unlike normal scaling, the base of these is 3.5×
+# the previous ship class instead of 2×.
+@juggernaut_reactor_power_1 = 5000
+@juggernaut_reactor_power_2 = 7000
+@juggernaut_reactor_power_3 = 9000
+@juggernaut_reactor_power_4 = 11000
+@juggernaut_reactor_power_5 = 13000
+@juggernaut_reactor_power_6 = 15000
+
+@starbase_reactor_power_1 = 5000
+@starbase_reactor_power_2 = 6000
+@starbase_reactor_power_3 = 7000
+@starbase_reactor_power_4 = 8000
+@starbase_reactor_power_5 = 9000
+@starbase_reactor_power_6 = 10000
+
+@platform_reactor_power_1 = 500
+@platform_reactor_power_2 = 600
+@platform_reactor_power_3 = 700
+@platform_reactor_power_4 = 800
+@platform_reactor_power_5 = 900
+@platform_reactor_power_6 = 1000
+
+#############
+#	COST	#
+#############
+
+@corvette_reactor_cost_1 = 5
+@corvette_reactor_cost_2 = 10
+@corvette_reactor_cost_3 = 15
+@corvette_reactor_cost_4 = 20
+@corvette_reactor_cost_5 = 25
+@corvette_reactor_cost_6 = 30
+
+@destroyer_reactor_cost_1 = 20
+@destroyer_reactor_cost_2 = 30
+@destroyer_reactor_cost_3 = 40
+@destroyer_reactor_cost_4 = 50
+@destroyer_reactor_cost_5 = 60
+@destroyer_reactor_cost_6 = 70
+
+@cruiser_reactor_cost_1 = 25
+@cruiser_reactor_cost_2 = 50
+@cruiser_reactor_cost_3 = 75
+@cruiser_reactor_cost_4 = 100
+@cruiser_reactor_cost_5 = 125
+@cruiser_reactor_cost_6 = 150
+
+@battleship_reactor_cost_1 = 75
+@battleship_reactor_cost_2 = 100
+@battleship_reactor_cost_3 = 125
+@battleship_reactor_cost_4 = 150
+@battleship_reactor_cost_5 = 175
+@battleship_reactor_cost_6 = 200
+
+@titan_reactor_cost_1 = 150
+@titan_reactor_cost_2 = 200
+@titan_reactor_cost_3 = 250
+@titan_reactor_cost_4 = 300
+@titan_reactor_cost_5 = 350
+@titan_reactor_cost_6 = 400
+
+# Unlike normal scaling, the base of these is 3.5×
+# the previous ship class instead of 2×.
+@juggernaut_reactor_cost_1 = 500
+@juggernaut_reactor_cost_2 = 700
+@juggernaut_reactor_cost_3 = 900
+@juggernaut_reactor_cost_4 = 1100
+@juggernaut_reactor_cost_5 = 1300
+@juggernaut_reactor_cost_6 = 1500
+
+@colossus_reactor_cost_1 = 1000
+@colossus_reactor_cost_2 = 2000
+
+@platform_reactor_cost_1 = 50
+@platform_reactor_cost_2 = 60
+@platform_reactor_cost_3 = 70
+@platform_reactor_cost_4 = 80
+@platform_reactor_cost_5 = 90
+@platform_reactor_cost_6 = 100
