@@ -54,8 +54,8 @@ ship_section_template = {
 		template = "large_strike_craft"
 		locatorname = "strike_craft_locator_05"
 	}
+	large_utility_slots = 20
 	aux_utility_slots = 5
-	large_utility_slots = 10
 	resources = {
 		category = ship_sections
 	}

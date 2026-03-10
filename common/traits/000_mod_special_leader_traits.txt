@@ -1,9 +1,6 @@
 ##################
 # SPECIAL TRAITS #
 ##################
-##################
-# SPECIAL TRAITS #
-##################
 leader_trait_shroud_age = {
 	inline_script = {
 		script = trait/icon

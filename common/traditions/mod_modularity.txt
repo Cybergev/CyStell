@@ -32,7 +32,8 @@ tr_modularity_adopt = {
 	modifier = {
 		MACHINE_species_trait_points_add = 2
 		MACHINE_species_trait_picks_add = 2
-		planet_metallurgists_sr_living_metal_produces_add = 0.2
+		planet_metallurgists_minerals_upkeep_add = 4
+		planet_metallurgists_sr_living_metal_produces_add = 0.5
 	}
 	unlocks_agenda = agenda_modularity_reshape_form
 }
@@ -64,7 +65,7 @@ tr_modularity_2 = {
 		modifier = {
 			MACHINE_species_trait_points_add = 2
 			MACHINE_species_trait_picks_add = 2
-			planet_pop_assemblers_alloys_upkeep_add = -1
+			planet_pop_assemblers_alloys_upkeep_add = -2
 			planet_pop_assemblers_sr_living_metal_upkeep_add = 1
 		}
 		custom_tooltip_with_modifiers = tr_modularity_2_modifier_gestalt_desc
@@ -72,7 +73,7 @@ tr_modularity_2 = {
 	modifier = {
 		MACHINE_species_trait_points_add = 1
 		MACHINE_species_trait_picks_add = 1
-		planet_pop_assemblers_alloys_upkeep_add = -1
+		planet_pop_assemblers_alloys_upkeep_add = -2
 		planet_pop_assemblers_sr_living_metal_upkeep_add = 1
 	}
 	custom_tooltip_with_modifiers = tr_modularity_2_modifier_desc

@@ -7,7 +7,7 @@ tech_space_cloud_weapon_1 = {
 		particles
 	}
 	ai_update_type = military
-	weight = @tier2weight1
+	weight = @tier2weight3
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -23,14 +23,14 @@ tech_space_cloud_weapon_1 = {
 # Null void beam
 null_void_beam = {
 	area = physics
-	cost = @tier1cost2
+	cost = @tier2cost3
 	tier = 2
 	is_rare = yes
 	category = {
 		particles
 	}
 	ai_update_type = military
-	weight = @tier2weight1
+	weight = @tier2weight3
 	ai_weight = {
 		modifier = {
 			factor = 1.25

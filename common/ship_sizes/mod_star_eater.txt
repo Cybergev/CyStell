@@ -12,7 +12,7 @@ star_eater = {
 		ship_armor_add = 100000
 		ship_armor_regen_add_perc = 0.05
 		ship_shield_add = 100000
-		ship_shield_regen_add_perc = 0.10
+		ship_shield_regen_add_perc = 0.05
 		ship_evasion_add = @colossus_evasion
 	}
 	section_slots = {
@@ -31,6 +31,10 @@ star_eater = {
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes	#if yes, ship design will have a 3d view in the ship browser
 	use_shipnames_from = colossus
+	ship_roles = {
+		carrier
+		artillery
+	}
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
@@ -92,12 +96,15 @@ star_eater = {
 	resources = {
 		category = ships
 		cost = {
-			sr_dark_matter = 5000
-			alloys = 10000
+			sr_dark_matter = 10000
+			alloys = 20000
 		}
 		upkeep = {
 			sr_dark_matter = 100
-			alloys = 50
+			alloys = 100
+		}
+		logistics = {
+			trade = @colossus_logistic_upkeep_trade
 		}
 	}
 	available_to_everyone = yes

@@ -34,14 +34,12 @@
 @titan_reactor_power_5 = 3500
 @titan_reactor_power_6 = 4000
 
-# Unlike normal scaling, the base of these is 3.5×
-# the previous ship class instead of 2×.
-@juggernaut_reactor_power_1 = 5000
-@juggernaut_reactor_power_2 = 7000
-@juggernaut_reactor_power_3 = 9000
-@juggernaut_reactor_power_4 = 11000
-@juggernaut_reactor_power_5 = 13000
-@juggernaut_reactor_power_6 = 15000
+@juggernaut_reactor_power_1 = 7500
+@juggernaut_reactor_power_2 = 10000
+@juggernaut_reactor_power_3 = 12500
+@juggernaut_reactor_power_4 = 15000
+@juggernaut_reactor_power_5 = 17500
+@juggernaut_reactor_power_6 = 20000
 
 @starbase_reactor_power_1 = 5000
 @starbase_reactor_power_2 = 6000
@@ -50,12 +48,12 @@
 @starbase_reactor_power_5 = 9000
 @starbase_reactor_power_6 = 10000
 
-@platform_reactor_power_1 = 500
-@platform_reactor_power_2 = 600
-@platform_reactor_power_3 = 700
-@platform_reactor_power_4 = 800
-@platform_reactor_power_5 = 900
-@platform_reactor_power_6 = 1000
+@platform_reactor_power_1 = 750
+@platform_reactor_power_2 = 1000
+@platform_reactor_power_3 = 1250
+@platform_reactor_power_4 = 1500
+@platform_reactor_power_5 = 1750
+@platform_reactor_power_6 = 2000
 
 #############
 #	COST	#
@@ -96,8 +94,6 @@
 @titan_reactor_cost_5 = 350
 @titan_reactor_cost_6 = 400
 
-# Unlike normal scaling, the base of these is 3.5×
-# the previous ship class instead of 2×.
 @juggernaut_reactor_cost_1 = 500
 @juggernaut_reactor_cost_2 = 700
 @juggernaut_reactor_cost_3 = 900
@@ -108,9 +104,9 @@
 @colossus_reactor_cost_1 = 1000
 @colossus_reactor_cost_2 = 2000
 
-@platform_reactor_cost_1 = 50
-@platform_reactor_cost_2 = 60
-@platform_reactor_cost_3 = 70
-@platform_reactor_cost_4 = 80
-@platform_reactor_cost_5 = 90
-@platform_reactor_cost_6 = 100
+@platform_reactor_cost_1 = 75
+@platform_reactor_cost_2 = 100
+@platform_reactor_cost_3 = 125
+@platform_reactor_cost_4 = 150
+@platform_reactor_cost_5 = 175
+@platform_reactor_cost_6 = 200

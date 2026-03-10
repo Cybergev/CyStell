@@ -1,9 +1,35 @@
+ship_uses_battleship_components = {
+	OR = {
+		# Regular Ships
+		is_ship_size = battleship
+		# Offspring Ships
+		is_ship_size = offspring_battleship
+		# Nanotech Ships
+		is_ship_size = nanite_interdictor
+		#  Cosmogenesis Ships
+		is_ship_size = cosmo_crisis_battlecruiser
+		# Biological Ships
+		is_ship_size = stinger_stage_1
+		is_ship_size = stinger_stage_2
+		is_ship_size = stinger_stage_3
+		is_ship_size = large_fallen_stinger
+		is_ship_size = cosmo_crisis_stinger
+		# Biological Offspring Ships
+		is_ship_size = offspring_stinger_stage_1
+		is_ship_size = offspring_stinger_stage_2
+		is_ship_size = offspring_stinger_stage_3
+	}
+}
+
 ship_uses_titan_components = {
 	OR = {
 		is_ship_size = titan
+		is_ship_size = colossus
+		is_ship_size = star_eater
 		is_ship_size = bio_titan
 		is_ship_size = cosmo_crisis_titan
-		is_ship_size = colossus
+		is_ship_size = large_fallen_stinger
+		is_ship_size = cosmo_crisis_stinger
 	}
 }
 
@@ -30,8 +56,7 @@ ship_uses_artillery_role = {
 		is_ship_size = destroyer
 		is_ship_size = cruiser
 		is_ship_size = battleship
-		is_ship_size = titan
-		ship_uses_colossus_components = yes
+		ship_uses_titan_components = yes
 		# Offspring Ships
 		is_ship_size = offspring_corvette
 		is_ship_size = offspring_destroyer
@@ -52,10 +77,12 @@ ship_uses_artillery_role = {
 		is_ship_size = harbinger_stage_2
 		is_ship_size = harbinger_stage_3
 		is_ship_size = large_fallen_harbinger
+		is_ship_size = cosmo_crisis_harbinger
 		is_ship_size = stinger_stage_1
 		is_ship_size = stinger_stage_2
 		is_ship_size = stinger_stage_3
 		is_ship_size = large_fallen_stinger
+		is_ship_size = cosmo_crisis_stinger
 		is_ship_size = bio_titan
 		# Biological Offspring Ships
 		is_ship_size = offspring_harbinger_stage_1
@@ -87,6 +114,7 @@ ship_uses_carrier_role = {
 		is_ship_size = harbinger_stage_2
 		is_ship_size = harbinger_stage_3
 		is_ship_size = large_fallen_harbinger
+		is_ship_size = cosmo_crisis_harbinger
 		is_ship_size = voidspawn_boss
 		# Biological Offspring Ships
 		is_ship_size = offspring_harbinger_stage_1
@@ -119,6 +147,7 @@ ship_uses_swarm_role = {
 		# Regular Ships
 		is_ship_size = corvette
 		is_ship_size = frigate
+		is_ship_size = destroyer
 		# Offspring Ships
 		is_ship_size = offspring_corvette
 		# Galactic Nemesis Ships
@@ -130,6 +159,7 @@ ship_uses_swarm_role = {
 		is_ship_size = mauler_stage_2
 		is_ship_size = mauler_stage_3
 		is_ship_size = large_fallen_mauler
+		is_ship_size = cosmo_crisis_mauler
 		# Biological Offspring Ships
 		is_ship_size = offspring_mauler_stage_1
 		is_ship_size = offspring_mauler_stage_2
@@ -149,11 +179,7 @@ ship_uses_platform_computers = {
 
 ship_uses_juggernaut_reactors = {
 	OR = {
-		# Regular Ships
-		is_ship_size = colossus
-		is_ship_size = juggernaut
-		# Galactic Nemesis Ships
-		is_ship_size = star_eater
+		ship_uses_colossus_components = yes
 		# Cosmogenesis Ships
 		is_ship_size = cosmo_crisis_titan
 		# Special Ships

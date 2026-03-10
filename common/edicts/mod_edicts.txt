@@ -13,15 +13,9 @@ form_galcom = {
 	}
 	potential = {
 		is_galactic_community_formed = no
-		count_playable_country = {
-			count = 1
-		}
 	}
 	allow = {
 		is_galactic_community_formed = no
-		count_playable_country = {
-			count = 1
-		}
 	}
 	effect = {
 		set_global_flag = galactic_community_founded

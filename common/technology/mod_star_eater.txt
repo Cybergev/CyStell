@@ -8,26 +8,13 @@ tech_btc_1 = {
 	category = {
 		voidcraft
 	}
+	prerequisites = {
+		"tech_colossus"
+	}
 	ai_update_type = military
 	weight = @tier5weight3
 	potential = {
 		has_nemesis = yes
-		OR = {
-			has_ascension_perk = ap_become_the_crisis
-			has_technology = tech_colossus
-			has_country_flag = can_build_star_eaters
-		}
-	}
-	weight_modifier = {
-		factor = 0
-		modifier = {
-			factor = 2
-			OR = {
-				has_ascension_perk = ap_become_the_crisis
-				has_technology = tech_colossus
-				has_country_flag = can_build_star_eaters
-			}
-		}
 	}
 	ai_weight = {
 		factor = 0

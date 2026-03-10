@@ -1,3 +1,7 @@
+@base_agenda_cost = 7000
+@base_tradition_agenda_cost = 7000
+@ascension_agenda_cost = 3500# Same as short_agenda_cost from traditions
+@ascension_agenda_cooldown = 1080# 3 Years
 agenda_gestalt_purge_traits = {
 	agenda_cost = @base_agenda_cost
 	potential = {

@@ -1,0 +1,209 @@
+utility_component_template = {
+	# Small
+	key = "SMALL_ARCHAEO_SHIELD"
+	size = small
+	icon = "GFX_ship_part_archaeo_shield"
+	icon_frame = 1
+	power = @power_S5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t5_cost
+			minor_artifacts = @minor_artifacts_cost_s
+		}
+		upkeep = {
+			energy = @shield_s_t5_upkeep_energy
+			alloys = @shield_s_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S5
+		ship_shield_regen_add_static = @regen_S5		#Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+	prerequisites = {
+		"tech_archaeoshield"
+	}
+	component_set = "ARCHAEO_SHIELD"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	# Medium
+	key = "MEDIUM_ARCHAEO_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_archaeo_shield"
+	icon_frame = 1
+	power = @power_M5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t5_cost
+			minor_artifacts = @minor_artifacts_cost_m
+		}
+		upkeep = {
+			energy = @shield_m_t5_upkeep_energy
+			alloys = @shield_m_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M5
+		ship_shield_regen_add_static = @regen_M5		#Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+	prerequisites = {
+		"tech_archaeoshield"
+	}
+	component_set = "ARCHAEO_SHIELD"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	# Large
+	key = "LARGE_ARCHAEO_SHIELD"
+	size = large
+	icon = "GFX_ship_part_archaeo_shield"
+	icon_frame = 1
+	power = @power_L5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t5_cost
+			minor_artifacts = @minor_artifacts_cost_l
+		}
+		upkeep = {
+			energy = @shield_l_t5_upkeep_energy
+			alloys = @shield_l_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_L5
+		ship_shield_regen_add_static = @regen_L5		#Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+	prerequisites = {
+		"tech_archaeoshield"
+	}
+	component_set = "ARCHAEO_SHIELD"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}

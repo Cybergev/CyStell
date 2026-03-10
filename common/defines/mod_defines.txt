@@ -12,12 +12,41 @@ NGameplay = {
 	DEFAULT_TRAIT_OPTIONS_ON_LEVEL_UP = 10	# Default number of selectable non-upgrade trait options before modifiers available on level up
 	NUM_DESTINY_TRAIT_OPTIONS = 10	# Default number of destiny traits to select from
 	NON_PARAGON_TRAIT_OPTIONS_ON_LEVEL_UP = 10	# Number of non-upgrade trait options available on level up without Galactic Paragons
+	LEADER_SKILL_MIN = 0
+	LEADER_SUBCLASS_CHOICE_LEVEL = 4	# At what level you can pick your leader subclass
+	LEADER_DESTINY_CHOICE_LEVEL = 7	# At what level you can pick your leader destiny trait
 	MAX_BASIC_TRAITS = 3	# How many basic traits you can have before you only get the option to level them up
 	MAX_VETERAN_TRAITS = 3	# How many veteran traits you can have before you only get the option to level them up
 	ETHOS_MAX_POINTS = 4
 	GOVERNMENT_CIVIC_POINTS_BASE = 3
-	RELIC_VIEW_SLOTS_PER_ROW = 5
-	RELIC_VIEW_SLOTS_PER_ROW_WIDE = 4
-	RELIC_VIEW_DEFAULT_ROW_COUNT = 2
+	RELIC_VIEW_SLOTS_PER_ROW = 1
+	RELIC_VIEW_SLOTS_PER_ROW_WIDE = 16
+	RELIC_VIEW_DEFAULT_ROW_COUNT = 1
 	COMMAND_LIMIT_BASE = 20
+	LEADER_TRAIT_SELECTION_LEVELS = {
+		0
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		8
+		9
+		10
+		11
+		12
+		13
+		14
+		15
+		16
+		17
+		18
+		19
+		20
+	}
+	PLANET_ASCENSION_COMPLETION_BONUS = 10	# Flat bonus on Planetary Ascension Tier cap when all the slots are unlocked
+	PLANET_ASCENSION_SPRAWL_MODIFIER = -0.01	# Reduction of planet sprawl per level of ascension
+	PLANET_ASCENSION_MODIFIER_SCALE = 0.1
 }

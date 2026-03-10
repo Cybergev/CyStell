@@ -33,11 +33,37 @@ trait_lithoid = {
 	icon = "gfx/interface/icons/traits/trait_lithoid.dds"
 	custom_tooltip_with_modifiers = TRAIT_LITHOID_EFFECT
 	modifier = {
+		leader_lifespan_add = 40
+		army_health = 0.4
+		pop_environment_tolerance = 0.4
 		logistic_growth_mult = -0.2
 		bonus_pop_growth_mult = -0.2
-		pop_environment_tolerance = 0.4
-		army_health = 0.4
-		leader_lifespan_add = 40
+	}
+	resources = {
+		category = planet_pops
+		# Mineral Upkeep
+		upkeep = {
+			trigger = {
+				is_phototrophic = no
+				NOT = {
+					has_trait = trait_voidling
+				}
+				is_being_purged = no
+				is_sapient = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				NOT = {
+					has_trait = trait_voidling
+				}
+				is_being_purged = no
+				is_sapient = yes
+			}
+			minerals = @living_standard_phototrophic_normal
+		}
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
@@ -50,6 +76,90 @@ trait_lithoid = {
 			}
 		}
 		pop_environment_tolerance = 0.5
+	}
+}
+
+trait_exd = {
+	cost = 0
+	sorting_priority = 20
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	leader_age_min = 100
+	leader_age_max = 200
+	allowed_archetypes = {
+		OTHER
+	}
+	tags = {
+		organic
+		positive
+		habitability
+		housing
+		production
+		research
+		upkeep
+		leader
+		army
+		special
+	}
+	species_class = {
+		EXD
+	}
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/traits/trait_exd.dds"
+	custom_tooltip_with_modifiers = TRAIT_EXD_EFFECT
+	modifier = {
+		army_health = 1
+		habitability_floor_add = 1
+		pop_housing_usage_mult = -0.5
+		logistic_growth_mult = -0.5
+		bonus_pop_growth_mult = -0.5
+		pop_amenities_usage_add = 1
+	}
+	resources = {
+		# Energy Upkeep
+		upkeep = {
+			trigger = {
+				is_being_purged = no
+				is_sapient = yes
+				exists = planet
+				planet = {
+					is_planet_class = pc_nuked
+				}
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				is_being_purged = no
+				is_sapient = yes
+				exists = planet
+				NOT = {
+					planet = {
+						is_planet_class = pc_nuked
+					}
+				}
+			}
+			energy = 2
+		}
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			physics_research = 1
+		}
 	}
 }
 

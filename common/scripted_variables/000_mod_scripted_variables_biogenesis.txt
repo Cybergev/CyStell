@@ -1,0 +1,11 @@
+# Mutagenic Habitability Trait
+@auto_base = 0.5
+@auto_bonus = 0.3
+@auto_ideal_bonus = 0.2
+@auto_penalty = -0.3
+@auto_base_bonus_sum = 0.8# Used for custom tooltips
+@auto_base_penalty_sum = 0.2# Used for custom tooltips
+# These modifiers are used for tooltips are are based off of the values in pop_high_habitability
+@auto_adapted_production = 0.02
+@auto_adapted_housing = -0.02
+@auto_adapted_amenities = -0.02

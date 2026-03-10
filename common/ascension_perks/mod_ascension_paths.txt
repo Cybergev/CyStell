@@ -1,4 +1,11 @@
-# Psionic Ascension (regular empires)
+#################
+# ASCENSION PATHS
+#################
+@ascension_path_base_weight = 100
+@ascension_path_synergy_weight = 2
+@ascension_path_anti_synergy_weight = 0.5
+@ascension_path_mindwardens_present = 0.3
+# Psionic Ascension
 ap_mind_over_matter = {
 	on_enabled = {
 		custom_tooltip = "mind_over_matter_tooltip"
@@ -37,7 +44,9 @@ ap_mind_over_matter = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_not_ap_synthetic_age"
-			NOT = { has_ascension_perk = ap_synthetic_age }
+			NOT = {
+				has_ascension_perk = ap_synthetic_age
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_not_ap_organo_machine_interfacing"
@@ -45,6 +54,10 @@ ap_mind_over_matter = {
 				has_ascension_perk = ap_organo_machine_interfacing
 				has_ascension_perk = ap_organo_machine_interfacing_assimilator
 			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
 		}
 		if = {
 			limit = {
@@ -139,6 +152,18 @@ ap_mind_over_matter = {
 		factor = @ascension_path_base_weight
 		modifier = {
 			factor = @ascension_path_synergy_weight
+			OR = {
+				has_mind_over_matter_synergy = yes
+				any_country = {
+					has_origin = origin_mindwardens
+					NOT = {
+						is_same_value = prev
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = @ascension_path_synergy_weight
 			has_mind_over_matter_synergy = yes
 		}
 		modifier = {
@@ -177,6 +202,7 @@ ap_the_flesh_is_weak = {
 			OR = {
 				num_ascension_perks > 1
 				has_origin = origin_cybernetic_creed
+				has_origin = origin_unplugged
 			}
 		}
 		custom_tooltip = {
@@ -184,6 +210,10 @@ ap_the_flesh_is_weak = {
 			NOT = {
 				has_ascension_perk = ap_synthetic_evolution
 			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
 		}
 	}
 	potential = {
@@ -196,6 +226,15 @@ ap_the_flesh_is_weak = {
 			has_origin = origin_shroudwalker_apprentice
 			has_origin = origin_cybernetic_creed
 			has_origin = origin_synthetic_fertility
+			has_origin = origin_evolutionary_predators
+			has_origin = origin_endbringers
+			AND = {
+				has_origin = origin_unplugged
+				OR = {
+					has_country_flag = is_decyberized
+					has_country_flag = is_cyberized
+				}
+			}
 		}
 		is_gestalt = no
 		is_individual_machine = no
@@ -206,6 +245,12 @@ ap_the_flesh_is_weak = {
 		modifier = {
 			factor = @ascension_path_anti_synergy_weight
 			has_flesh_is_weak_anti_synergy = yes
+		}
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 	}
 }
@@ -228,12 +273,22 @@ ap_organo_machine_interfacing = {
 		}
 		NOT = {
 			has_ascension_perk = ap_organo_machine_interfacing
+			has_origin = origin_evolutionary_predators
+			has_origin = origin_wilderness
 		}
 		has_authority = auth_hive_mind
+		is_hive_empire = yes
 		is_natural_design_empire = no
+		is_entropy_drinkers_empire = no
 	}
 	ai_weight = {
 		factor = @ascension_path_base_weight
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
+		}
 	}
 }
 
@@ -247,11 +302,23 @@ ap_organo_machine_interfacing_assimilator = {
 			fail_text = "requires_ascension_perks_2"
 			num_ascension_perks > 1
 		}
-		custom_tooltip = {
-			fail_text = "requires_not_ap_synthetic_age"
-			NOT = {
-				has_ascension_perk = ap_synthetic_age
+		if = {
+			limit = {
+				has_shroud_dlc = yes
 			}
+			custom_tooltip = {
+				fail_text = "requires_not_ap_interdimensional_processing"
+				has_psionic_ascension = no
+			}
+			NOT = {
+				country_has_situation = {
+					SITUATION = situation_shroud_forged
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
 		}
 	}
 	potential = {
@@ -261,14 +328,23 @@ ap_organo_machine_interfacing_assimilator = {
 		}
 		NOT = {
 			has_ascension_perk = ap_organo_machine_interfacing_assimilator
+			has_origin = origin_endbringers
 		}
 		has_civic = civic_machine_assimilator
+		is_chosen_empire = no
+		is_entropy_drinkers_empire = no
 	}
 	ai_weight = {
 		factor = @ascension_path_base_weight
 		modifier = {
 			factor = @ascension_path_synergy_weight
 			has_organo_machine_interfacing_assimilator_synergy = yes
+		}
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 	}
 }
@@ -336,9 +412,11 @@ ap_synthetic_evolution = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_not_ap_mind_over_matter"
-			NOT = {
-				has_ascension_perk = ap_mind_over_matter
-			}
+			has_psionic_ascension = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
 		}
 	}
 	potential = {
@@ -348,10 +426,13 @@ ap_synthetic_evolution = {
 		}
 		NOR = {
 			has_ascension_perk = ap_synthetic_evolution
-			has_authority = "auth_machine_intelligence"
+			is_machine_empire = yes
 			has_origin = origin_shroudwalker_apprentice
 			has_origin = origin_cybernetic_creed
 			has_origin = origin_synthetic_fertility
+			has_origin = origin_evolutionary_predators
+			has_origin = origin_endbringers
+			has_tradition = tr_cybernetics_adopt
 		}
 		is_gestalt = no
 		is_mechanical_empire = no
@@ -360,6 +441,14 @@ ap_synthetic_evolution = {
 			has_valid_civic = civic_augmentation_bazaars
 		}
 		is_individual_machine = no
+		owner_species = {
+			NOT = {
+				has_trait = trait_unplugged_decyberized
+			}
+		}
+		is_chosen_empire = no
+		is_galvanic_empire = no
+		is_entropy_drinkers_empire = no
 	}
 	ai_weight = {
 		factor = @ascension_path_base_weight
@@ -370,6 +459,12 @@ ap_synthetic_evolution = {
 		modifier = {
 			factor = @ascension_path_anti_synergy_weight
 			has_synthetic_evolution_anti_synergy = yes
+		}
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 		modifier = {
 			factor = 0
@@ -386,14 +481,18 @@ ap_synthetic_age = {
 			has_machine_age_dlc = yes
 		}
 		OR = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_individual_machine = yes
 		}
 		NOR = {
 			has_ascension_perk = ap_synthetic_age
 			has_ascension_perk = ap_synthetic_evolution
+			has_origin = origin_shroudwalker_apprentice
+			has_origin = origin_endbringers
 		}
 		is_natural_design_empire = no
+		is_chosen_empire = no
+		is_entropy_drinkers_empire = no
 	}
 	possible = {
 		custom_tooltip = {
@@ -405,6 +504,24 @@ ap_synthetic_age = {
 			NOT = {
 				has_ascension_perk = ap_organo_machine_interfacing_assimilator
 			}
+		}
+		if = {
+			limit = {
+				has_shroud_dlc = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_ap_interdimensional_processing"
+				has_psionic_ascension = no
+			}
+			NOT = {
+				country_has_situation = {
+					SITUATION = situation_shroud_forged
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_free_tradition_tree"
+			num_tradition_categories < @max_tradition_trees
 		}
 	}
 	custom_tooltip = "synthetic_age_tooltip"
@@ -432,6 +549,12 @@ ap_synthetic_age = {
 		modifier = {
 			factor = @ascension_path_anti_synergy_weight
 			has_synthetic_age_anti_synergy = yes
+		}
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 	}
 }
@@ -536,6 +659,7 @@ ap_engineered_evolution = {
 			has_origin = origin_shroudwalker_apprentice
 			has_origin = origin_cybernetic_creed
 			has_origin = origin_synthetic_fertility
+			has_origin = origin_endbringers
 		}
 		is_mechanical_empire = no
 		is_individual_machine = no
@@ -544,6 +668,8 @@ ap_engineered_evolution = {
 		NOT = {
 			has_valid_civic = civic_augmentation_bazaars
 		}
+		is_chosen_empire = no
+		is_entropy_drinkers_empire = no
 	}
 	tradition_swap = {
 		inherit_effects = yes
@@ -558,6 +684,12 @@ ap_engineered_evolution = {
 		modifier = {
 			factor = @ascension_path_synergy_weight
 			has_engineered_evolution_synergy = yes
+		}
+		modifier = {
+			factor = @ascension_path_mindwardens_present
+			any_country = {
+				has_origin = origin_mindwardens
+			}
 		}
 	}
 }
