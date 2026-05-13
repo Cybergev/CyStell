@@ -17,12 +17,17 @@ NGameplay = {
 	LEADER_DESTINY_CHOICE_LEVEL = 7	# At what level you can pick your leader destiny trait
 	MAX_BASIC_TRAITS = 3	# How many basic traits you can have before you only get the option to level them up
 	MAX_VETERAN_TRAITS = 3	# How many veteran traits you can have before you only get the option to level them up
+	LEADER_LIFESPAN_DEATH_CHANCE_AGE = 100	# Before this age the chance wont increase
+	LEADER_LIFESPAN_DEATH_CHANCE_INC = 0.002	# Increase with these % for each year above CHANCE_AGE
+	LEADER_LIFESPAN_HIGH_DEATH_CHANCE_AGE = 120	# Above this age, death chance increases drastically
+	LEADER_LIFESPAN_HIGH_DEATH_CHANCE_INC = 0.02	# Increase with these % for each year above HIGH_DEATH_CHANCE_AGE
 	ETHOS_MAX_POINTS = 4
 	GOVERNMENT_CIVIC_POINTS_BASE = 3
 	RELIC_VIEW_SLOTS_PER_ROW = 1
 	RELIC_VIEW_SLOTS_PER_ROW_WIDE = 16
 	RELIC_VIEW_DEFAULT_ROW_COUNT = 1
 	COMMAND_LIMIT_BASE = 20
+	NAVAL_CAPACITY_BASE = 100
 	LEADER_TRAIT_SELECTION_LEVELS = {
 		0
 		1

@@ -8,8 +8,8 @@ colossus = {
 	modifier = {
 		ship_evasion_add = @colossus_evasion
 	}
-	size_multiplier = 32
-	fleet_slot_size = 32
+	size_multiplier = 100
+	fleet_slot_size = 100
 	section_slots = {
 		"ship" = {
 			locator = "frame_ship"

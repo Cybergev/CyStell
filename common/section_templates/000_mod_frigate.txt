@@ -1,4 +1,4 @@
-@section_cost = 40
+@section_cost = 50
 ship_section_template = {
 	key = "CORVETTE_MID_M1S1"	# Used by the Frigate, not the Corvette
 	ship_size = frigate

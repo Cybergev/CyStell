@@ -6,7 +6,7 @@ tech_repeatable_improved_tile_mineral_output = {
 	category = {
 		industry
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_mineral_purification_2"
 	}
@@ -37,7 +37,7 @@ tech_repeatable_improved_ship_health = {
 		materials
 	}
 	ai_update_type = all
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_ship_armor_3"
 	}
@@ -68,7 +68,7 @@ tech_repeatable_improved_armor_output = {
 		materials
 	}
 	ai_update_type = all
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_ship_armor_3"
 	}
@@ -99,7 +99,7 @@ tech_repeatable_weapon_type_explosive_damage = {
 		propulsion
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		OR = {
 			tech_missiles_3
@@ -143,7 +143,7 @@ tech_repeatable_weapon_type_explosive_fire_rate = {
 		propulsion
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		OR = {
 			tech_missiles_3
@@ -187,7 +187,7 @@ tech_repeatable_weapon_type_kinetic_damage = {
 		propulsion
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_mass_drivers_3"
 	}
@@ -228,7 +228,7 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 		propulsion
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_mass_drivers_3"
 	}

@@ -1,0 +1,2010 @@
+#TO A
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_a_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO B
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_b_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO F
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO G
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_g_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO K
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_k_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO M
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_m_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO M_GIANT
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_m_giant_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO T
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_t_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO NEUTRON
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_neutron_star"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO PULSAR
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_pulsar"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#TO BLACK HOLE
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_m_giant_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_t_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_black_hole"
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 100000
+			sr_dark_matter = 100000
+			minor_artifacts = 10000
+		}
+	}
+	duration = 3600
+	condition = {
+		can_starforming = yes
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

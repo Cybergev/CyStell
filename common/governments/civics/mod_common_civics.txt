@@ -76,7 +76,7 @@ civic_dark_consortium = {
 		}
 	}
 	modifier = {
-		planet_physicists_sr_dark_matter_produces_add = 0.5
+		planet_physicists_sr_dark_matter_produces_add = 0.1
 	}
 	modification = {
 		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE
@@ -118,7 +118,7 @@ civic_corporate_dark_consortium = {
 		}
 	}
 	modifier = {
-		planet_physicists_sr_dark_matter_produces_add = 0.5
+		planet_physicists_sr_dark_matter_produces_add = 0.1
 	}
 	modification = {
 		moddable_conditions_custom_tooltip = CIVIC_NOT_MODDABLE_ONLY_REMOVE

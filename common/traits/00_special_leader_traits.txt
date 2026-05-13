@@ -125,9 +125,22 @@ leader_trait_cyborg = {
 	triggered_councilor_modifier = {
 		potential = {
 			is_ruler = yes
+			owner = {
+				is_gestalt = no
+			}
 		}
 		planet_structures_upkeep_mult = -0.25
 		empire_size_districts_mult = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		planet_pops_cyborgs_upkeep_mult = -0.35
+		planet_jobs_complex_drone_produces_mult = 0.15
 	}
 	# Commander - Fleet Modifier
 	triggered_fleet_modifier = {
@@ -180,6 +193,16 @@ leader_trait_cyborg = {
 		planet_jobs_society_research_produces_mult = 0.1
 		planet_jobs_engineering_research_produces_mult = 0.1
 	}
+	# Any Class - Planet Modifier for cyber machines
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		planet_pop_assembly_mult = 0.2
+	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
 		potential = {
@@ -188,6 +211,15 @@ leader_trait_cyborg = {
 		planet_jobs_physics_research_produces_mult = 0.05
 		planet_jobs_society_research_produces_mult = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		planet_pop_assembly_mult = 0.1
 	}
 	# Cyborg Oligarchic councilors
 	triggered_self_modifier = {
@@ -324,10 +356,8 @@ leader_trait_synthetic = {
 	}
 	opposites = {
 		leader_trait_erudite
-		leader_trait_chosen
 		leader_trait_cyborg
 		leader_trait_limited_cyborg
-		leader_trait_psionic
 	}
 	initial = no
 	randomized = no
@@ -503,9 +533,6 @@ leader_trait_psionic = {
 		scientist
 		official
 	}
-	opposites = {
-		leader_trait_synthetic
-	}
 	initial = no
 	randomized = no
 	notify_on_gained = no
@@ -663,9 +690,6 @@ leader_trait_chosen = {
 		scientist
 		official
 	}
-	opposites = {
-		leader_trait_synthetic
-	}
 	initial = no
 	randomized = no
 }
@@ -782,9 +806,6 @@ leader_trait_composer_chosen = {
 		scientist
 		official
 	}
-	opposites = {
-		leader_trait_synthetic
-	}
 	initial = no
 	randomized = no
 }
@@ -828,7 +849,7 @@ leader_trait_instrument_chosen = {
 				is_gestalt = yes
 			}
 		}
-		planet_stability_add = 5
+		planet_stability_add = 3
 		mult = value:transcended_psionic_multiplier
 	}
 	# Commander - Fleet Modifier
@@ -920,9 +941,6 @@ leader_trait_instrument_chosen = {
 		scientist
 		official
 	}
-	opposites = {
-		leader_trait_synthetic
-	}
 	initial = no
 	randomized = no
 }
@@ -1011,16 +1029,34 @@ leader_trait_eater_chosen = {
 	triggered_planet_modifier = {
 		potential = {
 			is_ruler = no
+			is_gestalt = no
 		}
-		job_soldier_per_pop = 0.1
+		job_soldier_add = 200
+		mult = value:transcended_psionic_multiplier
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			is_gestalt = yes
+		}
+		job_warrior_drone_add = 200
 		mult = value:transcended_psionic_multiplier
 	}
 	# Any Class - Sector Modifier
 	triggered_sector_modifier = {
 		potential = {
 			is_ruler = no
+			is_gestalt = no
 		}
-		job_soldier_per_pop = 0.05
+		job_soldier_add = 100
+		mult = value:transcended_psionic_multiplier
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+			is_gestalt = yes
+		}
+		job_warrior_drone_add = 100
 		mult = value:transcended_psionic_multiplier
 	}
 	triggered_councilor_modifier = {
@@ -1034,9 +1070,6 @@ leader_trait_eater_chosen = {
 		commander
 		scientist
 		official
-	}
-	opposites = {
-		leader_trait_synthetic
 	}
 	initial = no
 	randomized = no
@@ -1170,9 +1203,6 @@ leader_trait_cradle_chosen = {
 		scientist
 		official
 	}
-	opposites = {
-		leader_trait_synthetic
-	}
 	initial = no
 	randomized = no
 }
@@ -1280,9 +1310,6 @@ leader_trait_whisperers_chosen = {
 		commander
 		scientist
 		official
-	}
-	opposites = {
-		leader_trait_synthetic
 	}
 	initial = no
 	randomized = no

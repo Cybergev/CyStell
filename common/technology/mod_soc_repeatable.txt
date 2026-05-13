@@ -6,7 +6,7 @@ tech_repeatable_improved_tile_food_output = {
 	category = {
 		biology
 	}
-	levels = -1
+	levels = 10
 	potential = {
 		is_wilderness_empire = no
 	}
@@ -39,7 +39,7 @@ tech_repeatable_improved_core_system_cap = {
 	category = {
 		new_worlds
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_galactic_bureaucracy"
 	}
@@ -69,7 +69,7 @@ tech_repeatable_improved_leader_life_span = {
 	category = {
 		biology
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_vitality_boosters"
 	}
@@ -99,7 +99,7 @@ tech_repeatable_naval_cap = {
 	category = {
 		military_theory
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_doctrine_navy_size_4"
 	}
@@ -129,7 +129,7 @@ tech_repeatable_command_limit = {
 	category = {
 		military_theory
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_doctrine_fleet_size_5"
 	}
@@ -159,7 +159,7 @@ tech_repeatable_improved_starbase_capacity = {
 	category = {
 		new_worlds
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_galactic_ambitions"
 	}

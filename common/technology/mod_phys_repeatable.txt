@@ -6,7 +6,7 @@ tech_repeatable_improved_tile_energy_output = {
 	category = {
 		field_manipulation
 	}
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_power_plant_3"
 	}
@@ -37,7 +37,7 @@ tech_repeatable_improved_shield_output = {
 		field_manipulation
 	}
 	ai_update_type = all
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_shields_4"
 	}
@@ -68,7 +68,7 @@ tech_repeatable_weapon_type_energy_damage = {
 		particles
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_lasers_4"
 	}
@@ -109,7 +109,7 @@ tech_repeatable_weapon_type_energy_fire_rate = {
 		particles
 	}
 	ai_update_type = military
-	levels = -1
+	levels = 10
 	prerequisites = {
 		"tech_lasers_2"
 	}

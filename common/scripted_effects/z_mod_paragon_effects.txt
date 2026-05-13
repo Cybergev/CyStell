@@ -1,0 +1,57 @@
+restore_gestalt_councilor_effect = {
+	every_owned_leader = {
+		limit = {
+			is_councilor_type = $COUNCIL_POS$
+		}
+		custom_tooltip = restore_gestalt_councilor_effect_tooltip
+		save_global_event_target_as = culled_node
+		set_leader_flag = culled_node		# This blocks paragon.600 from generated an unused node.
+		owner = {
+			create_restored_node = {
+				CLASS = $CLASS$
+				COUNCIL_POS = $COUNCIL_POS$
+				DESC = $DESC$
+			}
+			prev = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			assign_restored_node = {
+				COUNCIL_POS = $COUNCIL_POS$
+			}
+			last_created_leader = {
+				if = {
+					limit = {
+						owner = {
+							has_valid_civic = civic_machine_predictive_analysis
+						}
+						is_councilor_type = councilor_gestalt_cognitive
+					}
+					add_skill = 1
+				}
+			}
+		}
+	}
+}
+
+create_restored_node = {
+	create_leader = {
+		class = $CLASS$
+		species = this
+		name = $COUNCIL_POS$
+		skill = 3
+		gender = indeterminable
+		event_leader = yes
+		skip_background_generation = yes
+		can_manually_change_location = no
+		hide_leader = yes
+		custom_description = $DESC$
+		randomize_traits = no
+		background_ethic = ethic_gestalt_consciousness
+		effect = {
+			save_event_target_as = restored_node
+			set_leader_flag = restored_node
+		}
+	}
+}

@@ -59,68 +59,113 @@ update_leader_after_modification = {
 	}
 }
 
-create_cybernetic_species_mod = {
-	species = {
+add_psionic_trait = {
+	if = {
+		limit = {
+			has_shroud_dlc = yes
+			species = {
+				is_robotic = yes
+			}
+		}
 		modify_species = {
+			species = this
+			remove_trait = trait_robot_latent_psionic
+			add_trait = trait_robot_psionic
 			effect = {
-				create_species = {
-					is_mod = yes
-					name = this
-					plural = this
-					class = this
-					portrait = this
-					traits = this
-					can_be_modified = this
-					homeworld = this
-					namelist = this
-					gender = this
-					traits = {
-						ideal_planet_class = this
-						trait = trait_cybernetic
+				save_event_target_as = psionic_species
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_shroud_dlc = yes
+				NOT = {
+					species = {
+						has_trait = trait_hive_mind
 					}
 				}
 			}
 		}
-		save_event_target_as = changing_species
+		modify_species = {
+			species = this
+			remove_trait = trait_latent_psionic
+			add_trait = trait_psionic
+			effect = {
+				save_event_target_as = psionic_species
+			}
+		}
 	}
-	owner = {
-		every_owned_pop_group = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
+}
+
+turn_main_species_to_psionic = {
+	country_event = {
+		id = timeline.81
+	}
+	every_owned_species = {
+		limit = {
+			OR = {
+				is_same_species = prev
+				AND = {
+					prev = {
+						has_origin = origin_shroud_forged
+					}
+					has_species_flag = original_main_species
+				}
 			}
-			change_species = last_created_species
+			is_latent_psionic_species = yes
 		}
-		every_owned_leader = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
+		save_event_target_as = changing_species
+		add_psionic_trait = yes
+		prev = {
+			if = {
+				limit = {
+					species = {
+						is_exact_same_species = event_target:changing_species
+					}
+				}
+				change_dominant_species = {
+					species = event_target:psionic_species
+				}
 			}
-			change_species = last_created_species
-		}
-		every_pool_leader = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
+			every_owned_pop_group = {
+				limit = {
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
 			}
-			change_species = last_created_species
-		}
-		every_envoy = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
+			every_owned_leader = {
+				limit = {
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
 			}
-			change_species = last_created_species
-		}
-		every_owned_army = {
-			limit = {
-				exists = species
-				is_exact_same_species = event_target:changing_species
+			every_pool_leader = {
+				limit = {
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
 			}
-			change_species = last_created_species
-		}
-		every_controlled_ship = {
-			limit = {
-				is_ship_class = shipclass_colonizer
-				is_exact_same_species = event_target:changing_species
+			every_envoy = {
+				limit = {
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
 			}
-			change_species = last_created_species
+			every_owned_army = {
+				limit = {
+					exists = species
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
+			}
+			every_controlled_ship = {
+				limit = {
+					is_ship_class = shipclass_colonizer
+					is_exact_same_species = event_target:changing_species
+				}
+				change_species = event_target:psionic_species
+			}
 		}
 	}
 }
@@ -153,73 +198,38 @@ create_cyber_species_effect = {
 	}
 }
 
-upgrade_to_psionic_race = {
+create_cyber_creed_species_effect = {
 	species = {
 		modify_species = {
-			remove_trait = trait_latent_psionic
-			add_trait = trait_psionic
 			effect = {
 				create_species = {
-					name = this
-					portrait = this
-					plural = this
-					homeworld = this
-					class = this
-					traits = this
 					is_mod = yes
+					name = this
+					plural = this
+					class = this
+					portrait = this
+					traits = this
 					can_be_modified = this
-					gender = this
+					homeworld = this
 					namelist = this
-					effect = {
-						save_event_target_as = last_created_species
+					gender = this
+					traits = {
+						ideal_planet_class = this
+						trait = trait_cybernetic
 					}
 				}
+				last_created_species = {
+					change_species_characteristics = {
+						remove_trait = trait_cyborg_creed_of_construction
+						remove_trait = trait_cyborg_creed_of_war
+						remove_trait = trait_cyborg_creed_of_research
+						remove_trait = trait_cyborg_creed_of_labor
+						remove_trait = trait_cyborg_ritualistic_implants
+						add_trait = trait_cybernetic
+					}
+					save_global_event_target_as = cybercreedspecies@root.owner
+				}
 			}
-		}
-		save_event_target_as = changing_species
-	}
-	change_dominant_species = {
-		species = event_target:last_created_species
-		change_all = yes
-	}
-	owner = {
-		every_owned_pop_group = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
-		}
-		every_owned_leader = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
-		}
-		every_pool_leader = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
-		}
-		every_envoy = {
-			limit = {
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
-		}
-		every_owned_army = {
-			limit = {
-				exists = species
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
-		}
-		every_controlled_ship = {
-			limit = {
-				is_ship_class = shipclass_colonizer
-				is_exact_same_species = event_target:changing_species
-			}
-			change_species = last_created_species
 		}
 	}
 }

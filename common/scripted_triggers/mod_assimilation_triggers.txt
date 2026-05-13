@@ -1,0 +1,11 @@
+can_perform_genetic_assimilation = {
+	OR = {
+		has_active_tradition = tr_genetics_creation
+		has_active_tradition = tr_purity_genotype_regeneration
+		has_active_tradition = tr_purity_genotype_regeneration_wilderness
+		has_active_tradition = tr_cloning_evolutionary_extrapolation
+		has_active_tradition = tr_mutation_unnatural_selection
+		has_tradition = tr_mutation_planned_polymorphism
+		has_valid_civic = civic_hive_bodysnatcher
+	}
+}

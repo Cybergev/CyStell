@@ -6,47 +6,39 @@ starbase_outpost = {
 	rotation_speed = 0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = @outpost_armor
 		starbase_module_capacity_add = 1
 		starbase_building_capacity_add = 1
+		starbase_defense_platform_capacity_add = 2
 		ship_sensor_range_add = 1
-		shipsize_military_station_small_hull_mult = 0.5
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.5
-		ship_weapon_range_mult = 0.2
-	}
-	max_hitpoints = 5000
+	max_hitpoints = 20000
 	base_buildtime = 360
 	resources = {
 		category = starbases
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 100
+			alloys = @outpost_cost
 		}
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 100
+			alloys = @outpost_cost
 			mult = 0.5
 		}
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 100
+			food = @outpost_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		cost = {
@@ -56,7 +48,7 @@ starbase_outpost = {
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 150
+			alloys = @outpost_machine_extra_cost
 		}
 		cost = {
 			trigger = {
@@ -65,7 +57,7 @@ starbase_outpost = {
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 150
+			alloys = @outpost_machine_extra_cost
 			mult = 0.5
 		}
 		cost = {
@@ -75,7 +67,7 @@ starbase_outpost = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 150
+			food = @outpost_machine_extra_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
@@ -137,17 +129,12 @@ starbase_starport = {
 	rotation_speed = 0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = @starport_armor
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 2
-		starbase_defense_platform_capacity_add = 5
-		ship_sensor_range_add = 1
+		starbase_defense_platform_capacity_add = 4
+		ship_sensor_range_add = 2
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.5
-		ship_weapon_range_mult = 0.2
-	}
-	max_hitpoints = 10000
+	max_hitpoints = 40000
 	base_buildtime = 360
 	resources = {
 		category = starbases
@@ -157,7 +144,7 @@ starbase_starport = {
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 200
+			alloys = @starport_cost
 		}
 		cost = {
 			trigger = {
@@ -165,7 +152,7 @@ starbase_starport = {
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 200
+			alloys = @starport_cost
 			mult = 0.5
 		}
 		cost = {
@@ -174,7 +161,7 @@ starbase_starport = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 200
+			food = @starport_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
@@ -236,17 +223,12 @@ starbase_starhold = {
 	rotation_speed = 0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = @starhold_armor
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 4
-		starbase_defense_platform_capacity_add = 10
-		ship_sensor_range_add = 1
+		starbase_defense_platform_capacity_add = 6
+		ship_sensor_range_add = 3
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.5
-		ship_weapon_range_mult = 0.2
-	}
-	max_hitpoints = 20000
+	max_hitpoints = 60000
 	base_buildtime = 720
 	resources = {
 		category = starbases
@@ -256,7 +238,7 @@ starbase_starhold = {
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 500
+			alloys = @starhold_cost
 		}
 		cost = {
 			trigger = {
@@ -264,7 +246,7 @@ starbase_starhold = {
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 500
+			alloys = @starhold_cost
 			mult = 0.5
 		}
 		cost = {
@@ -273,7 +255,7 @@ starbase_starhold = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 500
+			food = @starhold_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
@@ -341,17 +323,12 @@ starbase_starfortress = {
 	rotation_speed = 0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = @starfort_armor
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 6
-		starbase_defense_platform_capacity_add = 15
-		ship_sensor_range_add = 1
+		starbase_defense_platform_capacity_add = 8
+		ship_sensor_range_add = 4
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.5
-		ship_weapon_range_mult = 0.2
-	}
-	max_hitpoints = 40000
+	max_hitpoints = 80000
 	base_buildtime = 1080
 	resources = {
 		category = starbases
@@ -361,7 +338,7 @@ starbase_starfortress = {
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 1250
+			alloys = @starfort_cost
 		}
 		cost = {
 			trigger = {
@@ -369,7 +346,7 @@ starbase_starfortress = {
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 1250
+			alloys = @starfort_cost
 			mult = 0.5
 		}
 		cost = {
@@ -378,7 +355,7 @@ starbase_starfortress = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 1250
+			food = @starfort_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
@@ -452,17 +429,12 @@ starbase_citadel = {
 	rotation_speed = 0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = @citadel_armor
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 6
-		starbase_defense_platform_capacity_add = 20
-		ship_sensor_range_add = 1
+		starbase_defense_platform_capacity_add = 10
+		ship_sensor_range_add = 5
 	}
-	ship_modifier = {
-		ship_fire_rate_mult = 0.5
-		ship_weapon_range_mult = 0.2
-	}
-	max_hitpoints = 80000
+	max_hitpoints = 100000
 	base_buildtime = 1440
 	resources = {
 		category = starbases
@@ -472,7 +444,7 @@ starbase_citadel = {
 					country_uses_bio_ships = no
 				}
 			}
-			alloys = 3500
+			alloys = @citadel_cost
 		}
 		cost = {
 			trigger = {
@@ -480,7 +452,7 @@ starbase_citadel = {
 					country_uses_bio_ships = yes
 				}
 			}
-			alloys = 3500
+			alloys = @citadel_cost
 			mult = 0.5
 		}
 		cost = {
@@ -489,7 +461,7 @@ starbase_citadel = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 3500
+			food = @citadel_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {

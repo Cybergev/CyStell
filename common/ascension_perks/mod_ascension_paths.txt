@@ -509,10 +509,6 @@ ap_synthetic_age = {
 			limit = {
 				has_shroud_dlc = yes
 			}
-			custom_tooltip = {
-				fail_text = "requires_not_ap_interdimensional_processing"
-				has_psionic_ascension = no
-			}
 			NOT = {
 				country_has_situation = {
 					SITUATION = situation_shroud_forged

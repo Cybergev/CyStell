@@ -1,4 +1,4 @@
-@section_cost = 30
+@section_cost = 50
 ship_section_template = {
 	key = "CORVETTE_MID_S3"
 	ship_size = corvette

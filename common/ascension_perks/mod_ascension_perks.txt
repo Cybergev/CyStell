@@ -6,9 +6,6 @@ ap_imperial_prerogative = {
 		NOT = {
 			has_ascension_perk = ap_imperial_prerogative
 		}
-		NOT = {
-			has_authority = auth_corporate
-		}
 	}
 	ai_weight = {
 		factor = 10
@@ -47,13 +44,16 @@ ap_transcendent_learning = {
 		species_leader_exp_gain = 0.25
 		leaders_upkeep_mult = -0.25
 		leaders_cost_mult = -0.25
-		leader_trait_selection_options_add = 1
 		country_leader_pool_size = 1
+		country_leader_cap_add = 1
+		leader_trait_selection_options_add = 1
+		negative_traits_country = -1
 	}
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_transcendent_learning
 		}
+		has_tradition = tr_aptitude_finish
 	}
 	ai_weight = {
 		factor = 10
@@ -102,184 +102,6 @@ ap_master_builders = {
 		modifier = {
 			factor = 2
 			has_galactic_wonders = yes
-		}
-	}
-}
-
-ap_galactic_wonders_utopia = {
-	on_enabled = {
-		custom_tooltip = "add_research_options_galactic_wonders_utopia"
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_technology = tech_ring_world
-					}
-					can_research_technology = tech_ring_world
-				}
-				add_research_option = tech_ring_world
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_technology = tech_dyson_sphere
-					}
-				}
-				add_research_option = tech_dyson_sphere
-			}
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_2"
-			num_ascension_perks > 1
-		}
-		custom_tooltip = {
-			fail_text = "requires_mega_engineering"
-			has_technology = tech_mega_engineering
-		}
-	}
-	potential = {
-		host_has_dlc = "Utopia"
-		NOR = {
-			host_has_dlc = "Megacorp"
-			has_ascension_perk = ap_galactic_wonders_utopia
-		}
-	}
-	ai_weight = {
-		factor = 20
-		modifier = {
-			factor = 2
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_pacifist
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_materialist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_materialist
-		}
-	}
-}
-
-ap_galactic_wonders_megacorp = {
-	on_enabled = {
-		if = {
-			limit = {
-				NOT = {
-					has_technology = tech_matter_decompressor
-				}
-			}
-			add_research_option = tech_matter_decompressor
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_2"
-			num_ascension_perks > 1
-		}
-		custom_tooltip = {
-			fail_text = "requires_mega_engineering"
-			has_technology = tech_mega_engineering
-		}
-	}
-	potential = {
-		host_has_dlc = "Megacorp"
-		NOR = {
-			host_has_dlc = "Utopia"
-			has_ascension_perk = ap_galactic_wonders_megacorp
-		}
-	}
-	ai_weight = {
-		factor = 10
-		modifier = {
-			factor = 2
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_pacifist
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_materialist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_materialist
-		}
-	}
-}
-
-ap_galactic_wonders_utopia_and_megacorp = {
-	on_enabled = {
-		custom_tooltip = "add_research_options_galactic_wonders_utopia_megacorp"
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_technology = tech_ring_world
-					}
-				}
-				add_research_option = tech_ring_world
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_technology = tech_dyson_sphere
-					}
-				}
-				add_research_option = tech_dyson_sphere
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_technology = tech_matter_decompressor
-					}
-				}
-				add_research_option = tech_matter_decompressor
-			}
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_2"
-			num_ascension_perks > 1
-		}
-		custom_tooltip = {
-			fail_text = "requires_mega_engineering"
-			has_technology = tech_mega_engineering
-		}
-	}
-	potential = {
-		host_has_dlc = "Utopia"
-		host_has_dlc = "Megacorp"
-		NOT = {
-			has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
-		}
-	}
-	ai_weight = {
-		factor = 20
-		modifier = {
-			factor = 2
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_pacifist
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_materialist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_materialist
 		}
 	}
 }

@@ -3,7 +3,7 @@ setup_scenario = {
 	priority = 1	#priority decides in which order the scenarios are listed
 	default = yes
 	num_stars = 400
-	radius = 500	#should be less than 500, preferably less than ~460
+	radius = 350	#should be less than 500, preferably less than ~460
 	num_empires = {
 		min = 0
 		max = 15
@@ -38,13 +38,13 @@ setup_scenario = {
 		method = breadth_first
 	}
 	open_space_partitions = {
-		max_systems = 4
-		min_systems = 2
+		max_systems = 15
+		min_systems = 8
 		max_bridges = 4
 		min_bridges = 2
 		method = depth_first
 	}
-	num_nebulas = 10
+	num_nebulas = 2
 	nebula_size = 200
 	nebula_min_dist = 100
 	num_wormhole_pairs = {

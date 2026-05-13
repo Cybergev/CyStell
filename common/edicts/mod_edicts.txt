@@ -52,7 +52,6 @@ architectural_renaissance = {
 		megastructure_build_speed_mult = 0.5
 		country_megastructure_build_cap_add = 1
 		planet_building_build_speed_mult = 1
-		planet_building_capacity_add = 1
 	}
 	potential = {
 		has_technology = tech_ascension_theory

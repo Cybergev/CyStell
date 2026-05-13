@@ -24,8 +24,8 @@ juggernaut = {
 		}
 	}
 	combat_size_multiplier = 5
-	size_multiplier = 32
-	fleet_slot_size = 32
+	size_multiplier = 100
+	fleet_slot_size = 100
 	section_slots = {
 		"core" = {
 			locator = "part1"

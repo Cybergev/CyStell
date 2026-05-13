@@ -1,13 +1,38 @@
+tech_strike_craft_1 = {
+	area = engineering
+	tier = 0
+	category = {
+		voidcraft
+	}
+	ai_update_type = military
+	start_tech = yes
+	technology_swap = {
+		name = tech_bio_strike_craft_1
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = {
+			country_uses_bio_ships = yes
+		}
+		area = society
+		category = {
+			biology
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}
+
 tech_space_cloud_weapon_1 = {
 	area = physics
-	cost = @tier2cost3
-	tier = 2
+	cost = @tier5cost3
+	tier = 5
 	is_rare = yes
 	category = {
 		particles
 	}
 	ai_update_type = military
-	weight = @tier2weight3
+	weight = @tier5weight3
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -23,14 +48,14 @@ tech_space_cloud_weapon_1 = {
 # Null void beam
 null_void_beam = {
 	area = physics
-	cost = @tier2cost3
-	tier = 2
+	cost = @tier5cost3
+	tier = 5
 	is_rare = yes
 	category = {
 		particles
 	}
 	ai_update_type = military
-	weight = @tier2weight3
+	weight = @tier5weight3
 	ai_weight = {
 		modifier = {
 			factor = 1.25

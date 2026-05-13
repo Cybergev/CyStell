@@ -1,4 +1,4 @@
-@section_cost = 50
+@section_cost = 100
 #BOW
 ship_section_template = {
 	key = "DESTROYER_BOW_L1"

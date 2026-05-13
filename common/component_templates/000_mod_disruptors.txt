@@ -30,6 +30,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "SMALL_DISRUPTOR_2"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_1
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 1
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -73,6 +84,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "MEDIUM_DISRUPTOR_2"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_1
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 1
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -116,6 +138,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "LARGE_DISRUPTOR_2"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_1
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 1
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -160,6 +193,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "SMALL_DISRUPTOR_3"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_2
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 2
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -213,6 +257,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "MEDIUM_DISRUPTOR_3"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_2
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 2
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -266,6 +321,17 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "LARGE_DISRUPTOR_3"
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_2
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 2
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -310,6 +376,16 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "SMALL_ED_WEAPON"
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -363,6 +439,16 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "MEDIUM_ED_WEAPON"
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
@@ -416,6 +502,16 @@ weapon_component_template = {
 	}
 	ai_tag_weight = 5
 	upgrades_to = "LARGE_ED_WEAPON"
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 	resources = {
 		category = ship_components
 		cost = {
