@@ -1,28 +1,3 @@
-tradition_psionics = {
-	tree_template = "tree_21_12"
-	adoption_bonus = "tr_psionics_adopt"
-	finish_bonus = "tr_psionics_finish"
-	potential = {
-		has_utopia = yes
-		has_shroud_dlc = no
-		NOR = {
-			has_synthetic_ascension = yes
-			is_natural_design_empire = yes
-			has_origin = origin_mindwardens
-		}
-	}
-	traditions = {
-		"tr_psionics_psi_corps"
-		"tr_psionics_mind_readers"
-		"tr_psionics_psionic_assimilation"
-		"tr_psionics_breach_shroud"
-		"tr_psionics_shrouded_encryption"
-	}
-	ai_weight = {
-		factor = 1000
-	}
-}
-
 tradition_psionics_shroud = {
 	tree_template = "tree_11_12_21"
 	adoption_bonus = "tr_psionics_shroud_adopt"
@@ -30,7 +5,6 @@ tradition_psionics_shroud = {
 	potential = {
 		has_shroud_dlc = yes
 		NOR = {
-			has_synthetic_ascension = yes
 			is_natural_design_empire = yes
 			has_origin = origin_mindwardens
 		}

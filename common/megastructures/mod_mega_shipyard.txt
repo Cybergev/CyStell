@@ -368,7 +368,7 @@ mega_shipyard_restored = {
 		ship_starting_experience_add = 100
 	}
 	station_modifier = {
-		starbase_shipyard_capacity_add = 20
+		starbase_shipyard_capacity_add = 10
 	}
 	on_build_start = {
 		fromfrom = {

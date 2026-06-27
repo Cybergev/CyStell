@@ -1,4 +1,4 @@
-@EnigmaticEngineeringDraw = 0.025
+@EnigmaticEngineeringDraw = 2
 # Dark Matter Deflectors
 tech_dark_matter_deflector = {
 	cost = @fallentechcost
@@ -16,8 +16,15 @@ tech_dark_matter_deflector = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
 				has_ascension_perk = ap_enigmatic_engineering
@@ -78,8 +85,15 @@ tech_dark_matter_power_core = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
 				has_ascension_perk = ap_enigmatic_engineering
@@ -126,8 +140,15 @@ tech_dark_matter_propulsion = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
 				has_ascension_perk = ap_enigmatic_engineering
@@ -149,46 +170,18 @@ tech_fe_affluence_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_5
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_5
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -215,6 +208,13 @@ tech_fe_affluence_2 = {
 		"tech_fe_affluence_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -246,46 +246,18 @@ tech_fe_nourishment_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -316,6 +288,13 @@ tech_fe_nourishment_2 = {
 		"tech_fe_nourishment_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -351,46 +330,18 @@ tech_fe_fabricator_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_4
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -418,6 +369,13 @@ tech_fe_fabricator_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -444,46 +402,18 @@ tech_fe_singularity_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -511,6 +441,13 @@ tech_fe_singularity_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -537,46 +474,18 @@ tech_fe_forge_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_5
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_5
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -604,6 +513,13 @@ tech_fe_forge_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -630,46 +546,18 @@ tech_fe_dome_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_1
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_1
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -697,6 +585,13 @@ tech_fe_dome_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -723,46 +618,18 @@ tech_fe_fortress_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_3
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_3
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -790,6 +657,13 @@ tech_fe_fortress_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -816,46 +690,18 @@ tech_fe_administration_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_3
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_3
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -882,6 +728,13 @@ tech_fe_administration_2 = {
 		"tech_fe_administration_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -920,50 +773,22 @@ tech_fe_assembly_1 = {
 			has_policy_flag = robots_outlawed
 		}
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_4
-			}
-		}
-		modifier = {
-			factor = 0
 			is_hive_empire = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1000,6 +825,13 @@ tech_fe_assembly_2 = {
 			has_policy_flag = robots_outlawed
 		}
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -1027,51 +859,22 @@ tech_fe_clinic_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
-			factor = 0
-			NOR = {
-				has_crisis_level = crisis_cosmogenesis_level_4
-				has_ascension_perk = ap_enigmatic_engineering
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-				has_ascension_perk = ap_enigmatic_engineering
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
+			factor = 0
 			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_4
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
 			factor = 0
 			is_machine_empire = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1100,6 +903,13 @@ tech_fe_clinic_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -1126,47 +936,18 @@ tech_fe_security_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
-			factor = 0
-			NOR = {
-				has_crisis_level = crisis_cosmogenesis_level_1
-				has_ascension_perk = ap_enigmatic_engineering
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-				has_ascension_perk = ap_enigmatic_engineering
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_1
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
 			}
 		}
 		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
+			factor = 0
+			NOT = {
+				has_crisis_level = crisis_cosmogenesis_level_1
+				has_ascension_perk = ap_enigmatic_engineering
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1193,6 +974,13 @@ tech_fe_security_2 = {
 		"tech_fe_security_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1221,50 +1009,22 @@ tech_fe_market_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_3
 				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_3
-			}
-		}
-		modifier = {
-			factor = 0
 			is_gestalt = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1292,6 +1052,13 @@ tech_fe_market_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -1318,46 +1085,18 @@ tech_fe_silo_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_1
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_1
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1384,6 +1123,13 @@ tech_fe_silo_2 = {
 		"tech_fe_silo_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1412,50 +1158,22 @@ tech_fe_entertainment_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_4
-			}
-		}
-		modifier = {
-			factor = 0
 			is_gestalt = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1484,6 +1202,13 @@ tech_fe_entertainment_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -1510,46 +1235,18 @@ tech_fe_lab_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_5
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_5
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1577,6 +1274,13 @@ tech_fe_lab_2 = {
 	}
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				has_ascension_perk = ap_cosmogenesis
@@ -1603,46 +1307,18 @@ tech_fe_mine_1 = {
 	is_dangerous = yes
 	weight_modifier = {
 		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
+		modifier = {
 			factor = 0
-			NOR = {
+			NOT = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				has_ascension_perk = ap_cosmogenesis
-			}
-			calc_true_if = {
-				amount >= 4
-				has_technology = tech_fe_affluence_1
-				has_technology = tech_fe_nourishment_1
-				has_technology = tech_fe_fabricator_1
-				has_technology = tech_fe_singularity_1
-				has_technology = tech_fe_forge_1
-				has_technology = tech_fe_dome_1
-				has_technology = tech_fe_fortress_1
-				has_technology = tech_fe_administration_1
-				has_technology = tech_fe_assembly_1
-				has_technology = tech_fe_clinic_1
-				has_technology = tech_fe_security_1
-				has_technology = tech_fe_market_1
-				has_technology = tech_fe_silo_1
-				has_technology = tech_fe_entertainment_1
-				has_technology = tech_fe_lab_1
-				has_technology = tech_fe_mine_1
-			}
-		}
-		modifier = {
-			factor = @EnigmaticEngineeringDraw
-			NOT = {
-				has_crisis_level = crisis_cosmogenesis_level_2
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_ascension_perk = ap_enigmatic_engineering
 		}
 		modifier = {
 			factor = 2
@@ -1669,6 +1345,13 @@ tech_fe_mine_2 = {
 		"tech_fe_mine_1"
 	}
 	weight_modifier = {
+		modifier = {
+			factor = @EnigmaticEngineeringDraw
+			OR = {
+				has_ascension_perk = ap_enigmatic_engineering
+				has_crisis_level = crisis_cosmogenesis_level_4
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = {

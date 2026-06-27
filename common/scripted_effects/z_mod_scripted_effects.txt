@@ -78,13 +78,8 @@ add_psionic_trait = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				has_shroud_dlc = yes
-				NOT = {
-					species = {
-						has_trait = trait_hive_mind
-					}
-				}
+			species = {
+				is_robotic = no
 			}
 		}
 		modify_species = {
